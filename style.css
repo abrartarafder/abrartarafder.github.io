@@ -510,13 +510,35 @@ body {
 
   }
   .header-text h1 {
-    font-size: 70px;
+    font-size: 60px;
     justify-content: center;
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 900;
     color: white;
     letter-spacing: 1px;
     line-height: 1.2;
+  }
+
+  .tab-titles {
+    display: flex;
+    justify-content: space-between; /* Adjusts spacing between elements */
+    margin-bottom: 10px; /* Adds some spacing at the bottom */
+  }
+  .tab-links {
+
+    margin-right: 15px;
+    right: 10px;
+    font-size: 12px;
+    font-weight: 300;
+    cursor: pointer;
+    position: relative;
+
+  
+  }
+  
+  /* Add any other desired styling for the active link */
+  .active-link {
+    font-weight: bold;
   }
 
   .about-box {
@@ -530,6 +552,11 @@ body {
     border-radius: 20px;
     padding: 40px;
     /* border: 2px solid rgb(255, 255, 255); */
+    z-index: 10;
+  }
+
+  .about-box-2{
+    position: relative;
     z-index: 1;
   }
   .portfolio-box {
@@ -545,7 +572,7 @@ body {
     /* border: 2px solid rgb(255, 255, 255); */
     z-index: 1;
     border-radius: 20px;
-    height: 1300px;
+    height: 1340px;
     border-bottom: 90px;
     margin-bottom: 150px;
   }
@@ -556,13 +583,14 @@ body {
     top: 1900px;
     height: 135px;
 
+
   }
 
   .social-icons a {
-    font-size: 50px;
+    font-size: 40px;
     color: #212427;
     margin: 10px;
-    left: -60px;
+    left: -80px;
     bottom: 20px;
     text-align: center;
     justify-content: left;
@@ -580,21 +608,21 @@ body {
     color: #ff7700;
     position: relative;
     top: 130px;
-    left: 70px;
+    left: 30px;
   }
   
   .services-list i1 {
     color: #ffffff;
     position: relative;
     top: 110px;
-    left: 230px;
+    left: 110px;
   }
   
   .services-list i3 {
     color: #ffffff;
     position: relative;
     top: 110px;
-    left: 120px;
+    left: 30px;
   }
   
   .services-list i4 {
@@ -621,7 +649,7 @@ body {
   }
   
   .gallery-box{
-    height: 550px;
+    height: 480px;
 
   }
 
