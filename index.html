@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -8,12 +11,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/ec35105f42.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div id="header">
         <div class="container">
             <div id="header-text" class="header-text">
                 <style>
                     @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@900&display=swap');
+
                     h1 {
                         font-family: 'Nunito Sans', sans-serif;
                         font-weight: 900;
@@ -22,27 +27,9 @@
                 <h1 class="animated fadeInUp"> HI<span>,</span> I<span>'</span>M ABRAR TARAFDER<span>.</span></h1>
                 <p class="animated fadeInDown">A Computer Science Student in Toronto, Canada.</p>
             </div>
-            <!-- <div class="mode">
-                <div class="change" id="change-mode">&#127769;</div>
-            </div>
         </div>
     </div>
 
-    <script>
-        $(document).ready(function() {
-            var darkMode = false;
-            
-            $('.change').click(function() {
-              if (darkMode) {
-                $('body').removeClass('dark');
-                darkMode = false;
-              } else {
-                $('body').addClass('dark');
-                darkMode = true;
-              }
-            });
-        });
-    </script> -->
 
     <!-- Rest of the code... -->
 
@@ -51,214 +38,242 @@
     <div id="about">
         <div class="container">
             <div class="row">
-                
-                
+
+
 
                 <div class="about-box">
-                <div id="about-box-section">
-                
-                <div class="about-col-2">
-                    
-                    <h1>About Me</h1>
+                    <div id="about-box-section">
 
-                        <div class="tab-titles">
-                            <p class = "tab-links active-link" onclick="opentab('skills')">Skills</p>
-                            <p class = "tab-links" onclick="opentab('experience')">Experience</p>
-                            <p class = "tab-links"  onclick="opentab('education')">Education</p>
-                        </div>
-                        <div class= "tab-contents active-tab" id="skills">
-                            <ul>
-                                <li><span>Programming Languages</span><br>C++, Python, Java, Basic x86 Assembly Language with C, JS</li>
-                                <li><span>Data Analytics</span><br>SQL, Excel, Google Sheets, R, R Markdown, Tableau</li>
-                                <li><span>Certificates</span><br>Job Ready Experience Program, Human Resources Program, Project Management Program, Solutions Architect Program, Markets Program, and Google’s Data Analytics Professional Certification Course</li>
-                                <li><span>Frontend + UI</span><br>HTML, CSS, Javascript, Tkinter (GUI), Figma, ReactJS, Tailwind CSS<br></li>
-                            </ul>
-                        </div>
-                        <div class= "tab-contents" id="experience">
-                            <ul>
-                                <li><span>Walk With Web Inc</span><br>Digital Outreach Research Assistant (May 2023 - Present)</li>
-                                <li><span>InTech</span><br>Freelance Social Media Manager (March 2023 - Present)</li>
-                                <li><span>Opal</span><br>Software Development and Digital Marketing Intern (June 2022 - January 2022)</li>
-                                <li><span>EasyTraffic</span><br>Digital Marketer + Advertisement Designer (May 2022 - September 2022)</li>
-                                <li><span>Self-Employed</span><br>Tutor (May 2022 - July 2022)</li>
-                                <li><span>Global Commodities Traders Inc. </span><br>Sales Associate (June 2020 - August 2020)</li>
+                        <div class="about-col-2">
 
-                            </ul>
-                        </div>
-                        <div class= "tab-contents" id="education">
-                            <ul>
-                                <li><span>York University</span><br><b>April 2022 - Present</b><br>Current Second-Year Undergraduate student</li>
-                                <li><span>Ontario Tech University</span><br>September 2021 - April 2022<br>Current Second-Year Undergraduate student<br>Made the president’s list
-                                <br>Computer Science Club and Student Services Volunteer</li>
-                                <li><span>Regina Huda School</span><br>October 2014 - June 2021<br>High School Diploma<br></li>
-                            </ul>
-                        </div>
-                    
-            
+                            <h1>About Me</h1>
 
-                        </div>   
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                                <p class="tab-links" onclick="opentab('education')">Education</p>
+                            </div>
+                            <div class="tab-contents active-tab" id="skills">
+                                <ul>
+                                    <li><span>Programming Languages</span><br>C++, Python, Java, Basic x86 Assembly
+                                        Language with C, JS</li>
+                                    <li><span>Data Analytics</span><br>SQL, Excel, Google Sheets, R, R Markdown, Tableau
+                                    </li>
+                                    <li><span>Certificates</span><br>Job Ready Experience Program, Human Resources
+                                        Program, Project Management Program, Solutions Architect Program, Markets
+                                        Program, and Google’s Data Analytics Professional Certification Course</li>
+                                    <li><span>Frontend + UI</span><br>HTML, CSS, Javascript, Tkinter (GUI), Figma,
+                                        ReactJS, Tailwind CSS<br></li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="experience">
+                                <ul>
+                                    <li><span>Walk With Web Inc</span><br>Digital Outreach Research Assistant (May 2023
+                                        - Present)</li>
+                                    <li><span>InTech</span><br>Freelance Social Media Manager (March 2023 - Present)
+                                    </li>
+                                    <li><span>Opal</span><br>Software Development and Digital Marketing Intern (June
+                                        2022 - January 2022)</li>
+                                    <li><span>EasyTraffic</span><br>Digital Marketer + Advertisement Designer (May 2022
+                                        - September 2022)</li>
+                                    <li><span>Self-Employed</span><br>Tutor (May 2022 - July 2022)</li>
+                                    <li><span>Global Commodities Traders Inc. </span><br>Sales Associate (June 2020 -
+                                        August 2020)</li>
+
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>York University</span><br><b>April 2022 - Present</b><br>Current
+                                        Second-Year Undergraduate student</li>
+                                    <li><span>Ontario Tech University</span><br>September 2021 - April 2022<br>Current
+                                        Second-Year Undergraduate student<br>Made the president’s list
+                                        <br>Computer Science Club and Student Services Volunteer
+                                    </li>
+                                    <li><span>Regina Huda School</span><br>October 2014 - June 2021<br>High School
+                                        Diploma<br></li>
+                                </ul>
+                            </div>
+
+
+
                         </div>
+                    </div>
                 </div>
             </div>
 
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- services----------------------------------------------------- -->
+    <div id="services">
+        <div class="container">
+            <div class="row">
+                <div class="services-box">
+                    <div id="my-focus-box">
+                        <div class="services-col-2">
+                            <h1>My Current Focus</h1>
+
+                            <div class="services-list">
+                                <div>
+                                    <h2>Data Analytics <i class="fa-solid fa-code"></i></h2>
+                                    <p>I have completed Google's Data Analytics course offered by Coursera and am
+                                        interested to learn more</p>
+                                    <!-- <a href="#">learn more</a> -->
+                                </div>
+                                <div>
+                                    <h2>Learning Web Design<i1 class="fa-solid fa-laptop-file"></i1>
+                                    </h2>
+                                    <p>This website that you're seeing was designed by me as a beginner to frontend.
+                                    </p>
+                                    <!-- <a href="#">learn more</a> -->
+                                </div>
+                                <div>
+                                    <h2>Data Structures and Algorithms <i3 class="fa-solid fa-book"></i3>
+                                    </h2>
+                                    <p>I will be taking DS and Algorithms classes soon and am learning them as well </p>
+                                    <!-- <a href="#">learn more</a> -->
+                                </div>
+                                <div>
+                                    <h2>Projects, Internships and Hackathons<i4 class="fa-solid fa-chalkboard-user">
+                                        </i4>
+                                    </h2>
+                                    <p>I am currently working on a number of passion projects and trying to gain
+                                        experience with internships and hackathons. </p>
+                                    <!-- <a href="#">learn more</a> -->
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    
-<!-- services----------------------------------------------------- -->
-<div id="services">
-    <div class="container">
-      <div class="row">
-        <div class="services-box">
-            <div id="my-focus-box">
-          <div class="services-col-2">
-            <h1>My Current Focus</h1>
-            
-            <div class="services-list">
-                <div>
-                    <h2>Data Analytics <i class="fa-solid fa-code"></i></h2>
-                    <p>I have completed Google's Data Analytics course offered by Coursera and am interested to learn more</p>
-                    <!-- <a href="#">learn more</a> -->
+
+    <!-- -------------------------- -->
+
+    <div id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="portfolio-box">
+                    <h1>My Portfolio</h1>
+                    <div class="services-list">
+                        <div>
+                            <h2>Data Analytics Project</i></h2>
+                            <p>A data analytics capstone study -- my largest project yet as the course on which this
+                                project was based on took ~ 4 months to complete</p>
+                            <a
+                                href="https://docs.google.com/presentation/d/1w72tFtqQIUHG5KSLIH_DBT07t3_pwRnN-tJ7Zmjpxf4/edit?usp=sharing">Learn
+                                More</a>
+                        </div>
+                        <div>
+                            <h2>My Github</h2>
+                            <p>My github consists of some smaller projects as well as larger hackathon projects</p>
+                            <a href="https://github.com/abrartarafder">Learn More</a>
+                        </div>
+                        <div>
+                            <h2>My Resume</h2>
+                            <p>Find my resume here to look at my skills and experience</p>
+                            <a href="Resume_Abrar (5).pdf">Learn More</a>
+                        </div>
+                        <div>
+                            <h2>Projects, Internships and Hackathons</h2>
+                            <p>I am currently working on a number of passion projects and trying to gain experience with
+                                internships and hackathons. </p>
+                            <a href="https://www.linkedin.com/in/abrar-tarafder/">My LinkedIn Profile</a>
+                        </div>
+                    </div>
+
+
+
+
+
                 </div>
-                <div>
-                    <h2>Learning Web Design<i1 class="fa-solid fa-laptop-file"></i1></h2>
-                    <p>This website that you're seeing was designed by me as a beginner to frontend. </p>
-                    <!-- <a href="#">learn more</a> -->
-                </div>
-                <div>
-                    <h2>Data Structures and Algorithms <i3 class="fa-solid fa-book"></i3></h2>
-                    <p>I will be taking DS and Algorithms classes soon and am learning them as well </p>
-                    <!-- <a href="#">learn more</a> -->
-                </div>
-                <div>
-                    <h2>Projects, Internships and Hackathons<i4 class="fa-solid fa-chalkboard-user"></i4></h2>
-                    <p>I am currently working on a number of passion projects and trying to gain experience with internships and hackathons. </p>
-                    <!-- <a href="#">learn more</a> -->
-                </div>
-            </div>
-        </div>
 
+                <div id="contact">
+                    <div class="container">
+                        <div class="row">
+                            <div class="contact-box">
+                                <h1>Contact Me</h1>
+                                <div class="contact-left">
+                                    <div class="social-icons">
+                                        <a href="https://twitter.com/abrart1075"><i
+                                                class="fab fa-twitter-square"></i></a>
+                                        <a href="https://www.instagram.com/abrar.tarafder/?hl=en"><i
+                                                class="fab fa-instagram"></i></a>
+                                        <a href="https://www.linkedin.com/in/abrar-tarafder/"><i
+                                                class="fab fa-linkedin"></i></a>
+                                        <a href="mailto:abrart1075@gmail.com"><i
+                                                class="fas fa-envelope gmail-icon"></i></a>
+                                        <a href="https://github.com/abrartarafder"><i class="fab fa-github"></i></a>
 
-               
-                
-                
-                
-                
-                
-                
-            
-            
-  
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- -------------------------- -->
-
-<div id="portfolio">
-    <div class="container">
-        <div class="row">
-          <div class="portfolio-box">
-              <h1>My Portfolio</h1>
-              <div class="services-list">
-                <div>
-                    <h2>Data Analytics Project</i></h2>
-                    <p>A data analytics capstone study -- my largest project yet as the course on which this project was based on took ~ 4 months to complete</p>
-                    <a href="https://docs.google.com/presentation/d/1w72tFtqQIUHG5KSLIH_DBT07t3_pwRnN-tJ7Zmjpxf4/edit?usp=sharing">Learn More</a>
-                </div>
-                <div>
-                    <h2>My Github</h2>
-                    <p>My github consists of some smaller projects as well as larger hackathon projects</p>
-                    <a href="https://github.com/abrartarafder">Learn More</a>
-                </div>
-                <div>
-                    <h2>My Resume</h2>
-                    <p>Find my resume here to look at my skills and experience</p>
-                    <a href="Resume_Abrar (5).pdf">Learn More</a>
-                </div>
-                <div>
-                    <h2>Projects, Internships and Hackathons</h2>
-                    <p>I am currently working on a number of passion projects and trying to gain experience with internships and hackathons. </p>
-                    <a href="https://www.linkedin.com/in/abrar-tarafder/">My LinkedIn Profile</a>
-                </div>
-            </div>
-
-              
-
-
-
-</div>
-
-<div id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="contact-box">
-          <h1>Contact Me</h1>
-          <div class="contact-left">
-            <div class="social-icons">
-              <a href="https://twitter.com/abrart1075"><i class="fab fa-twitter-square"></i></a>
-              <a href="https://www.instagram.com/abrar.tarafder/?hl=en"><i class="fab fa-instagram"></i></a>
-              <a href="https://www.linkedin.com/in/abrar-tarafder/"><i class="fab fa-linkedin"></i></a>
-              <a href="mailto:abrart1075@gmail.com"><i class="fas fa-envelope gmail-icon"></i></a>
-              <a href="https://github.com/abrartarafder"><i class="fab fa-github"></i></a>
-              
-            </div>
-          </div>
-  
-
-  
-
-<div id="gallry">
-    <div class="container">
-        <div class="row">
-          <div class="gallery-box">
-              <h1>Some cool photos taken by me</h1>
-              <div class="about-box-2">
-                    <div class="image-container">
-                                  <img src="scenic.JPG"  width="700" height="100" alt="scenery">
-                                  
-                     </div>
-            </div>
-
-
-</div>
-
-
-  
-    
-
-</head>
-<body>
+                                    </div>
+                                </div>
 
 
 
 
-    <script>
+                                <div id="gallry">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="gallery-box">
+                                                <h1></h1>
+                                                <div class="about-box-2">
+                                                    <div class="image-container">
+                                                        <img src="scenic.JPG" width="700" height="100" alt="scenery">
 
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-    
-        function opentab(tabname){
-            for (var i = 0; i < tablinks.length; i++) {
-                tablinks[i].classList.remove("active-link");
-            }
-            for (var i = 0; i < tabcontents.length; i++) {
-                tabcontents[i].classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    
-    </script>
-    
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+
+
+
+
+                                            </head>
+
+                                            <body>
+
+                                                <script>
+
+                                                    var tablinks = document.getElementsByClassName("tab-links");
+                                                    var tabcontents = document.getElementsByClassName("tab-contents");
+
+                                                    function opentab(tabname) {
+                                                        for (var i = 0; i < tablinks.length; i++) {
+                                                            tablinks[i].classList.remove("active-link");
+                                                        }
+                                                        for (var i = 0; i < tabcontents.length; i++) {
+                                                            tabcontents[i].classList.remove("active-tab");
+                                                        }
+                                                        event.currentTarget.classList.add("active-link");
+                                                        document.getElementById(tabname).classList.add("active-tab");
+                                                    }
+
+                                                </script>
 
 
 
 
 
 
-</body>
+
+                                            </body>
+
 </html>
