@@ -11,13 +11,13 @@
 }
 
 #header {
-  padding-top: 0;
+  padding-top: -60;
   margin-top: -20px;
 }
 
 .header-text {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -41,8 +41,6 @@ body {
   justify-content: center;
 }
 
-
-
 #header {
   display: flex;
   justify-content: space-between;
@@ -54,111 +52,7 @@ body {
   padding: 10px 10%;
 }
 
-nav {
-  /* display: flex; */
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-  width: 185%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-  border: 1px solid #ccc;
-  /* Add a border */
-  background-color: #333B50;
-  /* Set a background color */
-}
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 12px;
-  padding: 0;
-  padding-left: 330px;
-}
-
-nav ul li {
-  margin: 0 20px;
-}
-
-nav ul li:first-child {
-  margin-left: 0;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: lighter;
-  font-size: 18px;
-  position: relative;
-}
-
-nav ul li a::after {
-  content: '';
-  width: 0%;
-  height: 3px;
-  background: #ff7700;
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  transition: 0.5s;
-}
-
-nav ul li a:hover::after {
-  width: 100%;
-}
-
-/* Dark Mode Button */
-
-.dark-mode-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 10px;
-  left: 20px;
-  width: 40px;
-  height: 40px;
-  background-color: #fff;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-/* dark mode */
-.dark-mode-toggle.dark i {
-  color: #000000;
-}
-
-.mode {
-  margin-top: -10px;
-  float: left;
-  margin-left: 260px;
-}
-
-.change {
-  cursor: pointer;
-  border-radius: 40%;
-  width: 10px;
-  text-align: center;
-  padding: 5px;
-  margin-left: 8px;
-}
-
-.change img {
-  height: 15px;
-}
-
-.dark {
-  background-color: #212427;
-  color: #000000;
-}
 
 .header-text {
 
@@ -203,8 +97,9 @@ nav ul li a:hover::after {
 
 /* about */
 #about {
-  margin-top: 1900px;
+  margin-top: 2000px;
   padding: 100px 0;
+  top: 200px;
 
 }
 
@@ -244,7 +139,7 @@ nav ul li a:hover::after {
 
 .about-box {
   position: absolute;
-  top: 700px;
+  top: 650px;
   left: 50%;
   transform: translateX(-50%);
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.25);
@@ -258,7 +153,7 @@ nav ul li a:hover::after {
 
 .about-box-2 {
   position: absolute;
-  top: 150px;
+  top: 50px;
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
@@ -540,7 +435,7 @@ nav ul li a:hover::after {
 .gallery-box {
   position: absolute;
   margin-top: 10px;
-  top: 500px;
+  top: 300px;
   left: 50%;
   transform: translateX(-50%);
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.25);
@@ -550,7 +445,7 @@ nav ul li a:hover::after {
   /* border: 2px solid rgb(255, 255, 255); */
   z-index: 1;
   border-radius: 20px;
-  height: 1000px;
+  height: 900px;
 }
 
 
@@ -569,6 +464,8 @@ nav ul li a:hover::after {
   /* Add this property to center the text vertically */
   align-items: center;
   /* Add this property to center the text vertically */
+  margin-bottom: 40px;
+  left: 30px;
 }
 
 
@@ -604,4 +501,135 @@ nav ul li a:hover::after {
 .contact-box h1 {
   text-align: center;
   margin-right: 50px;
+}
+
+@media only screen and (max-width: 767px) {
+  /* Mobile-specific styles go here */
+  #header {
+    margin-top: 10px; /* Adjusted margin-top for better visibility on mobile */
+
+  }
+  .header-text h1 {
+    font-size: 70px;
+    justify-content: center;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 900;
+    color: white;
+    letter-spacing: 1px;
+    line-height: 1.2;
+  }
+
+  .about-box {
+    position: absolute;
+    top: 600px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.25);
+    width: 80%;
+    max-width: 800px;
+    border-radius: 20px;
+    padding: 40px;
+    /* border: 2px solid rgb(255, 255, 255); */
+    z-index: 1;
+  }
+  .portfolio-box {
+    position: absolute;
+    margin-top: 1850px;
+    top: 800px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.25);
+    width: 80%;
+    max-width: 800px;
+    padding: 40px;
+    /* border: 2px solid rgb(255, 255, 255); */
+    z-index: 1;
+    border-radius: 20px;
+    height: 1300px;
+    border-bottom: 90px;
+    margin-bottom: 150px;
+  }
+
+  .contact-box {
+    display: flex;
+    flex-wrap: column;
+    top: 1900px;
+    height: 135px;
+
+  }
+
+  .social-icons a {
+    font-size: 50px;
+    color: #212427;
+    margin: 10px;
+    left: -60px;
+    bottom: 20px;
+    text-align: center;
+    justify-content: left;
+    position: relative;
+  }
+
+  .contact-box h1 {
+    font-size: 0px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 900;
+    color: white;
+  }
+
+  .services-list i {
+    color: #ff7700;
+    position: relative;
+    top: 130px;
+    left: 70px;
+  }
+  
+  .services-list i1 {
+    color: #ffffff;
+    position: relative;
+    top: 110px;
+    left: 230px;
+  }
+  
+  .services-list i3 {
+    color: #ffffff;
+    position: relative;
+    top: 110px;
+    left: 120px;
+  }
+  
+  .services-list i4 {
+    color: #ff7700;
+    position: relative;
+    top: 130px;
+    left: 60px;
+  }
+
+  .gallery-box {
+    position: absolute;
+    margin-top: 10px;
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    max-width: 800px;
+    padding: 50px;
+    /* border: 2px solid rgb(255, 255, 255); */
+    z-index: 1;
+    border-radius: 20px;
+    height: 1000px;
+  }
+  
+  .gallery-box{
+    height: 550px;
+
+  }
+
+  .gallery-box h1 {
+    font-size: 32px;
+    line-height: 1.1;
+    margin-top: -20px;
+    margin-left: 45px;
+  }
+  
 }
