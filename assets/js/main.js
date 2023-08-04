@@ -49,6 +49,26 @@ const sr = ScrollReveal({
     reset: true
 })
 
+// Get the theme button and add a click event listener
+const themeButton = document.getElementById("theme-button");
+themeButton.addEventListener("click", toggleDarkMode);
+
+// Function to toggle dark mode
+function toggleDarkMode() {
+    // Toggle the dark mode class on the body element
+    document.body.classList.toggle("dark-mode");
+
+    // Toggle the moon and sun icons
+    if (document.body.classList.contains("dark-mode")) {
+        themeButton.classList.remove("bx-moon");
+        themeButton.classList.add("bx-sun");
+    } else {
+        themeButton.classList.remove("bx-sun");
+        themeButton.classList.add("bx-moon");
+    }
+}
+
+
 /*SCROLL HOME*/
 sr.reveal('.home__title', {})
 sr.reveal('.home__scroll', {delay: 200})
