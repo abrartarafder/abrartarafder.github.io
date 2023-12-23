@@ -11,24 +11,30 @@
 :root{
     --first-color: #333B51;
     --white-color: #ff8317;
-    --dark-color: #2A3B47;
-    --text-color: #697477;
+    --dark-color: #333B51;
+    --text-color:#333B51;
     background-color: white;
     --oar-color:  #ff8317;
-    --greyer: #697477;
+    --d-color:#2A3B47;
+    --greyer: #cbcbcb;
+    --c-color:#2A3B47;
+    --e-color:#000000;
 }
 
 /* Dark mode styles */
 .dark-mode {
-    --first-color: #001938;
+    --first-color: #000000;
+    --d-color:#ff8317;
     --white-color: #ff8317;
-    --dark-color:  #001938;
-    --text-color: #434343;
-    background-color: rgb(162, 168, 173);
-    --oar-color:  #002343;
+    --dark-color:  #000000;
+    --text-color: #ffffff;
+    background-color: #474e62;
+    --oar-color:  #ffffff;
     --greyer: #bbbcbc;
+    --c-color:#ffffff;
+    --e-color:#ffffff;
 }
-
+ 
 /*===== Fuente y tipografia =====*/
 :root{
     --body-font: 'Montserrat', sans-serif;
@@ -265,7 +271,7 @@ img{
     margin: 0 var(--mb-1);
 }
 .about__social-icon:hover{
-    color: var(--oar-color);
+    color: #ff8317;
 }
 
 /* ===== SKILLS =====*/
@@ -273,7 +279,7 @@ img{
     row-gap: 2rem;
 }
 .skills__subtitle{
-    color: var(--first-color);
+    color: var(--c-color);
     margin-bottom: var(--mb-3);
 }
 .skills__name{
