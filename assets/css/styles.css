@@ -108,6 +108,10 @@ img {
     padding: 3rem 0;
 }
 
+.typed-cursor {
+    color: #ff8317 !important; /* Change the cursor color to orange */
+}
+
 .section-title {
     position: relative;
     font-size: var(--h2-font-size);

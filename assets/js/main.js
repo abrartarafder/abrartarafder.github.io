@@ -71,6 +71,17 @@ function toggleDarkMode() {
     themeButton.classList.add("bx-moon");
   }
 }
+    // Array of different roles
+    const roles = ['Computer Science Student', 'Data Analyst', 'Graphic and Web Designer', 'Digital Marketer', 'Tech Enthusiast']; // Add more roles as needed
+    // Initialize Typed.js instance
+    const type = new Typed('#roleDescription', {
+        strings: roles,
+        typeSpeed: 100,
+        backSpeed: 100,
+        backDelay: 1000,
+        loop: true
+    });
+
 
 /*SCROLL HOME*/
 sr.reveal(".home__title", {});
