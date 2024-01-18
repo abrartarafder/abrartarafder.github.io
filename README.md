@@ -1,3 +1,3 @@
-# abrartarafder.github.io
-portfolio website
-Not yet optimized for phones
+# Portfolio Website
+
+My Portfolio Website containing my resume, portfolio, experience, projects and more! Feel Free to Check it out! 
