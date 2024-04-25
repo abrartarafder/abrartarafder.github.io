@@ -218,7 +218,7 @@ img {
 
 .nav__link {
     position: relative;
-    color: var(--dark-color);
+    color: white;
 }
 
 .nav__link:hover {
