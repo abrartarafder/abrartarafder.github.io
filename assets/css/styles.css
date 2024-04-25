@@ -10,29 +10,44 @@
 /*===== Color =====*/
 :root {
     --first-color: #333B51;
+    --nav-color: #333B51;
     --white-color: #ff8317;
     --dark-color: #333B51;
     --text-color: #333B51;
-    background-color: white;
+background: rgb(255,255,255);
+background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 22%, rgba(255,239,217,1) 100%);
+background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 22%, rgba(255,239,217,1) 100%);
+background: linear-gradient(180deg, rgba(255,255,255,1) 22%, rgba(255,239,217,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffefd9",GradientType=1);
+    --container-color: #FFFFFF;
     --oar-color: #ff8317;
     --d-color: #2A3B47;
     --greyer: #cbcbcb;
     --c-color: #2A3B47;
     --e-color: #000000;
+    --title-color: #333B51;
+
 }
 
 /* Dark mode styles */
 .dark-mode {
-    --first-color: #000000;
+    --first-color: #ffffff;
+    --nav-color: black;
     --d-color: #ff8317;
     --white-color: #ff8317;
     --dark-color: #000000;
     --text-color: #ffffff;
-    background-color: #474e62;
+    background: rgb(0,0,0);
+    background: -moz-linear-gradient(180deg, rgba(0,0,0,1) 52%, rgba(54,31,1,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(0,0,0,1) 52%, rgba(54,31,1,1) 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 52%, rgba(54,31,1,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#361f01",GradientType=1);
+    
     --oar-color: #ffffff;
     --greyer: #bbbcbc;
     --c-color: #ffffff;
     --e-color: #ffffff;
+    --title-color: white;
 }
 
 /*===== Fuente y tipografia =====*/
@@ -235,7 +250,7 @@ img {
 /*===== HOME =====*/
 .home {
     position: relative;
-    background-color: var(--first-color);
+    background-color: var(--nav-color);
     overflow: hidden;
 }
 
@@ -341,7 +356,7 @@ img {
 
 /* ===== PORTFOLIO =====*/
 .portfolio {
-    background-color: var(--white-color);
+    background-color: var(--background-color);
 }
 
 .portfolio__container {
