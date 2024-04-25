@@ -185,12 +185,16 @@ img {
         width: 80%;
         height: 100%;
         padding: 2rem;
-        background-color: var(--first-color);
+        background-color:var(--nav-color);
         transition: .5s;
         backdrop-filter: blur(10px);
     }
 
     .nav__item a {
+        color: #ffffff;
+    }
+
+    .nav__item a:hover {
         color: #ff8317;
     }
 
@@ -516,9 +520,7 @@ img {
         display: none;
     }
 
-    .nav__link {
-        color: var(--white-color);
-    }
+
 
     .nav__link:hover {
         color: var(--white-color);
