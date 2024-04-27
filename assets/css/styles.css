@@ -395,6 +395,16 @@ img {
 
 .portfolio__img:hover .portfolio__link {
     bottom: 0;
+   
+}
+
+.portfolio__link{
+    background-color: var(--nav-color)!important;
+}
+
+
+.portfolio__link:hover{
+    background-color: var(--nav-color)!important;
 }
 
 .portfolio__link-name {
