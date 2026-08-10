@@ -72,7 +72,7 @@ function toggleDarkMode() {
   }
 }
     // Array of different roles
-    const roles = ['Computer Science Student', 'Data Analyst', 'Graphic and Web Designer', 'Digital Marketer', 'Tech Enthusiast']; // Add more roles as needed
+    const roles = ['Computer Scientist', 'Data Analyst', 'Database Developer', 'Graphic and Web Designer', 'Digital Marketer', 'Tech Enthusiast']; // Add more roles as needed
     // Initialize Typed.js instance
     const type = new Typed('#roleDescription', {
         strings: roles,
