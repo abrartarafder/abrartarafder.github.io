@@ -39,7 +39,7 @@ let scheduled = false;
 function updateNavigation() {
   const sections = [...document.querySelectorAll('main section[id]')];
   const current = sections.reverse().find(section => section.getBoundingClientRect().top <= 160);
-  const activeId = current?.id === 'community' ? 'experience' : current?.id === 'next' ? 'portfolio' : current?.id;
+  const activeId = current?.id === 'community' ? 'experience' : current?.id;
   links.forEach(link => {
     const active = link.hash === `#${activeId}`;
     link.classList.toggle('active', active);
