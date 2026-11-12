@@ -1,4 +1,4 @@
-﻿const menu = document.getElementById('nav-menu');
+const menu = document.getElementById('nav-menu');
 const toggle = document.getElementById('nav-toggle');
 const links = [...document.querySelectorAll('.nav__link')];
 function closeMenu() {
@@ -24,22 +24,24 @@ document.addEventListener('keydown', event => {
 window.matchMedia('(min-width: 761px)').addEventListener('change', closeMenu);
 const themeButton = document.getElementById('theme-button');
 function applyTheme(dark) {
-  document.body.classList.toggle('dark-mode', dark);
+  document.documentElement.classList.toggle('dark-mode', dark);
   themeButton.setAttribute('aria-pressed', String(dark));
   themeButton.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
   themeButton.firstElementChild.className = dark ? 'bx bx-sun' : 'bx bx-moon';
 }
 try { applyTheme(localStorage.getItem('portfolio-theme') === 'dark'); } catch { /* Storage can be unavailable. */ }
 themeButton.addEventListener('click', () => {
-  const dark = !document.body.classList.contains('dark-mode');
+  const dark = !document.documentElement.classList.contains('dark-mode');
   applyTheme(dark);
   try { localStorage.setItem('portfolio-theme', dark ? 'dark' : 'light'); } catch { /* Theme still works for this visit. */ }
 });
 let scheduled = false;
 function updateNavigation() {
-  const current = [...document.querySelectorAll('main section[id]')].reverse().find(section => section.getBoundingClientRect().top <= 160);
+  const sections = [...document.querySelectorAll('main section[id]')];
+  const current = sections.reverse().find(section => section.getBoundingClientRect().top <= 160);
+  const activeId = current?.id === 'community' ? 'experience' : current?.id === 'next' ? 'portfolio' : current?.id;
   links.forEach(link => {
-    const active = link.hash === `#${current?.id}`;
+    const active = link.hash === `#${activeId}`;
     link.classList.toggle('active', active);
     if (active) link.setAttribute('aria-current', 'location');
     else link.removeAttribute('aria-current');

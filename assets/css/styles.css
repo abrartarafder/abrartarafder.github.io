@@ -25,7 +25,7 @@ body {
     font-family:'DM Sans',sans-serif;
     line-height:1.7
 }
-body.dark-mode {
+:root.dark-mode {
     --bg:#181e2b;
     --surface:#222a3b;
     --ink:#f3f2ee;
@@ -841,3 +841,295 @@ a:focus-visible,button:focus-visible {
     
 }
 
+
+/* Graduate profile and current interests */
+.education-summary {
+    padding: 20px 0;
+    margin-bottom: 24px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+.education-summary h3 {
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+.education-summary p {
+    color: var(--muted);
+    font-size: 12px;
+}
+.education-summary strong {
+    color: var(--ink);
+}
+.education-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    margin: 12px 0;
+    font-size: 11px;
+    color: var(--muted);
+}
+.education-highlights li {
+    border-left: 2px solid var(--orange);
+    padding-left: 9px;
+}
+.section-intro {
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: -24px;
+    margin-bottom: 35px;
+}
+
+/* Portfolio covers keep their labels as editable, accessible HTML. */
+.project-cover {
+    position: relative;
+    aspect-ratio: 1.65;
+    overflow: hidden;
+    isolation: isolate;
+    background: var(--slate);
+}
+.project-cover img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 0;
+}
+.project-cover::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #17203220, #17203280);
+    z-index: 1;
+}
+.project-cover__title {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
+    color: #fff;
+    font-family: Manrope, sans-serif;
+    font-weight: 800;
+    font-size: clamp(20px, 2.2vw, 28px);
+    line-height: 1.25;
+    letter-spacing: -.6px;
+    text-transform: uppercase;
+}
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 17px;
+}
+.project-tech li {
+    padding: 3px 7px;
+    border-radius: 4px;
+    background: var(--soft);
+    color: var(--muted);
+    font-size: 10px;
+}
+.project-action {
+    display: inline-block;
+    margin-top: 18px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid var(--orange);
+    color: var(--ink);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* Named cover palettes stay with each card when its position changes. */
+.cover--freshroute .project-cover img {
+    /* FreshRoute: forest green */
+    filter: saturate(1.2);
+}
+.cover--cruise .project-cover img {
+    /* Cruise Critic: ocean blue */
+    filter: hue-rotate(20deg) saturate(1.25);
+}
+.cover--atlas .project-cover img {
+    /* Atlas: violet */
+    filter: hue-rotate(-15deg) saturate(1.6);
+}
+.cover--ttc .project-cover img {
+    /* TTC: copper orange */
+    filter: saturate(1.15);
+}
+.cover--collection .project-cover img {
+    /* Project collection: golden amber */
+    filter: hue-rotate(22deg) saturate(1.25) brightness(1.1);
+}
+.cover--capstone .project-cover img {
+    /* Data analytics: turquoise */
+    filter: hue-rotate(-30deg) saturate(1.55) brightness(1.08);
+}
+.cover--github .project-cover img {
+    /* GitHub: rose */
+    filter: hue-rotate(65deg) saturate(1.8);
+}
+.cover--resume .project-cover img {
+    /* Resume: crimson */
+    filter: hue-rotate(-35deg) saturate(1.35);
+}
+.cover--linkedin .project-cover img {
+    /* LinkedIn: indigo */
+    filter: hue-rotate(125deg) saturate(1.25);
+}
+.cover--hackathon .project-cover img {
+    /* Hackathon: plum */
+    filter: hue-rotate(30deg) saturate(2) brightness(.9);
+}
+
+/* Align card content, tag rows, and actions within each grid row. */
+.portfolio__img {
+    display: flex;
+    flex-direction: column;
+}
+.project-cover {
+    flex-shrink: 0;
+}
+.portfolio__link {
+    display: flex;
+    flex: 1;
+}
+.portfolio__link a {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+}
+.project-tech {
+    margin-top: auto;
+    padding-top: 17px;
+}
+.project-action {
+    margin-top: 18px;
+}
+
+/* Separate project work from professional profiles and resources. */
+.portfolio-group-heading {
+    margin-bottom: 26px;
+}
+.portfolio-group-heading h3 {
+    margin-bottom: 7px;
+    font-size: 22px;
+    letter-spacing: -.5px;
+}
+.portfolio-group-heading p {
+    color: var(--muted);
+    font-size: 13px;
+}
+.portfolio-group-heading--resources {
+    margin-top: 60px;
+    padding-top: 38px;
+    border-top: 1px solid var(--line);
+}
+@media (min-width: 1001px) {
+    .portfolio__container--resources {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+    }
+    .portfolio__container--resources .portfolio__link {
+        padding: 20px;
+    }
+    .portfolio__container--resources .project-cover__title {
+        font-size: 20px;
+    }
+    .portfolio__container--resources .portfolio__link h3 {
+        font-size: 17px;
+    }
+}
+
+/* Final typography, touch targets, and layout refinements. */
+body {
+    -webkit-font-smoothing: antialiased;
+}
+.hero-copy h1, .section-title, .contact-heading h2 {
+    text-wrap: balance;
+}
+.hero-description, .about__text, .portfolio__link p {
+    text-wrap: pretty;
+}
+.icon-button {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+}
+.about__social-icon, .footer__social {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+}
+.about__social {
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.footer__social {
+    margin-right: 2px;
+}
+#skills .skills__container {
+    align-items: start;
+    row-gap: 32px;
+}
+#skills .skills__box {
+    border-top: 1px solid var(--line);
+    padding-top: 21px;
+}
+.contact-email {
+    display: inline-block;
+    margin-top: 24px;
+    color: #dce0e9;
+    border-bottom: 1px solid #ffffff40;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+.project-cover__title {
+    overflow-wrap: anywhere;
+}
+@media (max-width: 760px) {
+    .hero-social a, .footer__link {
+        padding-block: 10px;
+    }
+    .nav__actions {
+        gap: 6px;
+    }
+    .hero-copy h1 {
+        line-height: 1.16;
+    }
+    .contact-heading {
+        padding-bottom: 42px;
+    }
+    .portfolio-group-heading--resources {
+        margin-top: 42px;
+    }
+}
+@media (max-width: 360px) {
+    .shell, .bd-grid, .section-title {
+        width: calc(100% - 28px);
+    }
+    .nav {
+        padding-inline: 10px;
+    }
+    .nav__contact {
+        padding-inline: 10px;
+    }
+    .hero-actions {
+        align-items: stretch;
+    }
+}
+
+/* Allow grid children to shrink within narrow viewports. */
+.hero-copy, .hero-visual, .about__container > *, .skills__container > * {
+    min-width: 0;
+}
+.portrait-frame img {
+    position: absolute;
+    inset: 0;
+}

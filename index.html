@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Abrar Jawad Tarafder &mdash; Computer Science graduate in Toronto building software, databases, and thoughtful web experiences.">
+    <script>
+        try {
+            if (localStorage.getItem('portfolio-theme') === 'dark') document.documentElement.classList.add('dark-mode');
+        } catch { /* Use the default theme if storage is unavailable. */ }
+    </script>
     <meta name="theme-color" content="#333b51">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,9 +28,9 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li><a href="#about" class="nav__link">About</a></li>
+                    <li><a href="#skills" class="nav__link">Skills</a></li>
                     <li><a href="#experience" class="nav__link">Experience</a></li>
                     <li><a href="#portfolio" class="nav__link">Work</a></li>
-                    <li><a href="#skills" class="nav__link">Skills</a></li>
                 </ul>
             </div>
             <div class="nav__actions">
@@ -56,7 +61,7 @@
         <div class="experience-strip"><div class="shell"><span>EXPERIENCE ACROSS</span><strong>York University</strong><strong>Hydro One</strong><strong>Walk With Web</strong></div></div>
         <!--===== ABOUT =====-->
         <section class="about section" id="about">
-            <h2 class="section-title">A curious mind. A practical approach.</h2>
+            <h2 class="section-title">About Me</h2>
 
             <div class="about__container bd-grid">
                 <div class="about__img">
@@ -64,32 +69,29 @@
                 </div>
 
                 <div>
-                    <h2 class="about__subtitle">Good software starts with a good question.</h2>
-                    <span class="about__profession">Computer Science graduate &middot; York University</span>
-                    <p class="about__text">Passionate about continuous learning and eager to explore, I thrive on
-                        embracing change and actively seek out new challenges. With nearly 4 years of professional
-                        experience gained through co-op and contract opportunities during my undergraduate studies,
-                        spanning software development, database engineering, database design, automation, web design,
-                        and web development, I enjoy building solutions that solve real-world problems while
-                        continuously expanding my technical and creative expertise. Whether it's exploring innovative
-                        technologies, connecting with inspiring individuals, or contributing to meaningful projects, I'm
-                        always excited to learn and grow.
-
-                        I'm now looking for opportunities to bring that experience to a team and keep building meaningful things.
-                    </p>
+                    <h3 class="about__subtitle">Good software starts with a good question.</h3>
+                    <span class="about__profession">Honours Computer Science graduate &middot; York University</span>
+                    <p class="about__text">I'm a Computer Science graduate from York University's Lassonde School of Engineering, graduating with Honours and First Class Standing. I bring 3+ years of experience across software development, databases, automation, and digital projects, including a 16-month co-op at Hydro One.</p>
+                    <p class="about__text">I'm seeking opportunities in software development, data analytics, and technology. My current interests include agentic AI, practical automation, and building applications that connect useful data with thoughtful user experiences.</p>
+                    <div class="education-summary" aria-label="Education highlights">
+                        <h3>Education Highlights</h3>
+                        <p><strong>BSc Honours, Computer Science</strong><br>Lassonde School of Engineering, York University &middot; 2022&ndash;2026</p>
+                        <ul class="education-highlights"><li>First Class Standing</li><li>GPA: 3.8/4.0</li><li>Dean's Honour Roll &middot; Final Year</li></ul>
+                        <p class="education-certificate">Google Data Analytics Professional Certificate &middot; Coursera</p>
+                    </div>
 
                     <div class="about__social">
-                        <a aria-label="LinkedIn" href="https://www.linkedin.com/in/abrar-tarafder/" class="about__social-icon"><i
+                        <a aria-label="LinkedIn" href="https://www.linkedin.com/in/abrar-tarafder/" class="about__social-icon"><i aria-hidden="true"
                                 class='bx bxl-linkedin'></i></a>
-                        <a aria-label="GitHub" href="https://github.com/abrartarafder" class="about__social-icon"><i
+                        <a aria-label="GitHub" href="https://github.com/abrartarafder" class="about__social-icon"><i aria-hidden="true"
                                 class='bx bxl-github'></i></a>
-                        <a aria-label="Instagram" href="https://www.instagram.com/abrartarafder/?hl=en" class="about__social-icon"><i
+                        <a aria-label="Instagram" href="https://www.instagram.com/abrartarafder/?hl=en" class="about__social-icon"><i aria-hidden="true"
                                 class='bx bxl-instagram'></i></a>
-                        <a aria-label="Twitter" href="https://twitter.com/abrart1075" class="about__social-icon"><i
+                        <a aria-label="Twitter" href="https://twitter.com/abrart1075" class="about__social-icon"><i aria-hidden="true"
                                 class='bx bxl-twitter'></i></a>
-                        <a aria-label="Email Abrar" href="mailto:abrart1075@gmail.com" class="about__social-icon"><i
+                        <a aria-label="Email Abrar" href="mailto:abrart1075@gmail.com" class="about__social-icon"><i aria-hidden="true"
                                 class='bx bxl-gmail'></i></a>
-                        <a aria-label="Expanded CV" href="https://abrartarafder.github.io/abrar-cv-expanded/" class="about__social-icon"><i
+                        <a aria-label="Expanded CV" href="https://abrartarafder.github.io/abrar-cv-expanded/" class="about__social-icon"><i aria-hidden="true"
                                 class='bx bxs-folder-plus'></i></a>
 
 
@@ -107,77 +109,77 @@
 
         <!--===== SKILLS =====-->
         <section class="skills section" id="skills">
-            <h2 class="section-title">The tools behind the work.</h2>
+            <h2 class="section-title">Technical Skills</h2>
 
             <div class="skills__container bd-grid">
                 <div class="skills__box">
-
-                    <h3 class="skills__subtitle">Tools + Platforms</h3>
-                    <span class="skills__name">Gitlab CI/CD </span>
+                    <h3 class="skills__subtitle">Programming Languages</h3>
+                    <span class="skills__name">Python</span>
+                    <span class="skills__name">SQL</span>
+                    <span class="skills__name">Java</span>
+                    <span class="skills__name">C++</span>
+                    <span class="skills__name">C</span>
+                    <span class="skills__name">JavaScript</span>
+                    <span class="skills__name">Shell Scripting</span>
+                    <span class="skills__name">x86 Assembly</span>
+                </div>
+                <div class="skills__box">
+                    <h3 class="skills__subtitle">Frontend &amp; Design</h3>
+                    <span class="skills__name">HTML &amp; CSS</span>
+                    <span class="skills__name">React</span>
+                    <span class="skills__name">Bootstrap</span>
+                    <span class="skills__name">Tailwind CSS</span>
+                    <span class="skills__name">Figma</span>
+                    <span class="skills__name">Canva</span>
+                    <span class="skills__name">WordPress</span>
+                </div>
+                <div class="skills__box">
+                    <h3 class="skills__subtitle">Backend &amp; Databases</h3>
+                    <span class="skills__name">Node.js</span>
+                    <span class="skills__name">Express</span>
+                    <span class="skills__name">MongoDB</span>
+                    <span class="skills__name">DuckDB</span>
+                    <span class="skills__name">Oracle SQL Developer</span>
+                    <span class="skills__name">Database Design</span>
+                </div>
+                <div class="skills__box">
+                    <h3 class="skills__subtitle">AI &amp; Data Analytics</h3>
+                    <span class="skills__name">LangChain</span>
+                    <span class="skills__name">OpenAI</span>
+                    <span class="skills__name">Ollama</span>
+                    <span class="skills__name">Streamlit</span>
+                    <span class="skills__name">pandas</span>
+                    <span class="skills__name">NetworkX</span>
+                    <span class="skills__name">Power BI</span>
+                    <span class="skills__name">Excel</span>
+                    <span class="skills__name">R</span>
+                </div>
+                <div class="skills__box">
+                    <h3 class="skills__subtitle">Tools &amp; Workflows</h3>
+                    <span class="skills__name">Git</span>
+                    <span class="skills__name">GitLab CI/CD</span>
                     <span class="skills__name">Jira</span>
                     <span class="skills__name">Notion</span>
                     <span class="skills__name">Kanban</span>
-                    <span class="skills__name">Sharepoint / Sharepoint Designer</span>
-                    <span class="skills__name">Oracle SQL Developer</span>
-                    <span class="skills__name">Infinity (Task Management Tool)</span>
-                    <span class="skills__name">MailChimp</span>
-                    <span class="skills__name">PowerBI</span>
-
-                    <h3 class="skills__subtitle">UI, Design + Frontend</h3>
-                    <span class="skills__name">HTML + CSS (Bootstrap, Tailwind, etc)</span>
-                    <span class="skills__name">Figma</span>
-                    <span class="skills__name">Canva</span>
-                    <span class="skills__name">Tkinter (GUI for Python)</span>
-                    <span class="skills__name"> ReactJS (learning the MERN stack)</span>
-
-                    <h3 class="skills__subtitle">Programming Languages, DB + Backend</h3>
-                    <span class="skills__name">C++</span>
-                    <span class="skills__name">Java</span>
-                    <span class="skills__name">Assembly + C</span>
-                    <span class="skills__name">Python</span>
-                    <span class="skills__name">MongoDB</span>
-                    <span class="skills__name">SQL</span>
-                    <span class="skills__name">Data Analytics</span>
-                    <span class="skills__name">JavaScript (beginner)</span>
-                    <span class="skills__name">Shell Scripting</span>
-                    <span class="skills__name">DevOps</span>
-                    <span class="skills__name">SCADA</span>
                     <span class="skills__name">YAML</span>
-
-
+                    <span class="skills__name">SCADA</span>
+                    <span class="skills__name">SharePoint</span>
                 </div>
-
-                <div class="skills__img">
-                    <h3 class="skills__subtitle">Other Softwares and Programs</h3>
-                    <span class="skills__name">WordPress</span>
-                    <span class="skills__name">MS Word</span>
-                    <span class="skills__name">Adobe PhotoShop</span>
-                    <span class="skills__name">Adobe InDesign</span>
-                    <span class="skills__name">MS Excel</span>
-                    <span class="skills__name">Tableau (beginner)</span>
-                    <span class="skills__name">Google Drive</span>
-
-                    <h3 class="skills__subtitle">Certificates</h3>
-
-                    <span class="skills__name">Job Ready Experience Program</span>
-                    <span class="skills__name">Human Resources Program</span>
-                    <span class="skills__name">Project Management Program</span>
-                    <span class="skills__name">Solutions Architect Program</span>
-                    <span class="skills__name">Markets Program</span>
-                    <span class="skills__name">Google Data Analytics Professional Certification Course</span>
-
-                    <h3 class="skills__subtitle">Project + Agile Method</h3>
+                <div class="skills__box">
+                    <h3 class="skills__subtitle">Documentation &amp; Communication</h3>
                     <span class="skills__name">Technical Documentation</span>
-                    <span class="skills__name">LaTex</span>
-                    <span class="skills__name">Mermaid Diagram (for sys design and workflows)</span>
-
+                    <span class="skills__name">LaTeX</span>
+                    <span class="skills__name">Mermaid</span>
+                    <span class="skills__name">Adobe Photoshop</span>
+                    <span class="skills__name">Adobe InDesign</span>
+                    <span class="skills__name">Project Coordination</span>
                 </div>
             </div>
         </section>
 
         <!--===== EXPERIENCE =====-->
         <section class="skills section" id="experience">
-            <h2 class="section-title">Where I've put it into practice.</h2>
+            <h2 class="section-title">Professional Experience</h2>
 
             <div class="skills__container bd-grid">
                 <div class="skills__box">
@@ -188,7 +190,7 @@
                         2026 - Aug 2026</span>
                 </div>
                 <div class="skills__box">
-                    <h3 class="skills__subtitle">OT Operations Intern (16 month Co-op)</h3>
+                    <h3 class="skills__subtitle">OT Operations Intern (16-month Co-op)</h3>
                     <span class="about__profession">Hydro One
                     </span>
                     <span class="about__profession">May
@@ -243,7 +245,7 @@
 
         <!--===== VE =====-->
         <section class="skills section volunteer" id="community">
-            <h2 class="section-title">Beyond the day job.</h2>
+            <h2 class="section-title">Volunteer Experience</h2>
 
             <div class="skills__container bd-grid">
                 <div class="skills__box">
@@ -254,134 +256,124 @@
                         2023 - April 2024</span>
                 </div>
                 <div class="skills__box">
-                    <h3 class="skills__subtitle">LEARN Student Ambassador</h3>
+                    <h3 class="skills__subtitle">Learn Student Ambassador</h3>
                     <span class="about__profession">Microsoft</span>
                     <span class="about__profession">July
                         2023 - December 2023</span>
+                </div>
+                <div class="skills__box">
+                    <h3 class="skills__subtitle">Mentor &amp; Preliminary Judge</h3>
+                    <span class="about__profession">UNHack</span>
+                    <span class="about__profession">2025</span>
                 </div>
             </div>
         </section>
 
 
         <!--===== PORTFOLIO =====-->
-        <section class="portfolio section" id="portfolio">
-            <h2 class="section-title">A few things I've worked on.</h2>
-
-
-            <div class="portfolio__container bd-grid">
-                <div class="portfolio__img">
-                    <img loading="lazy" src="assets/img/portfolio.png" alt="Portfolio preview">
-
+        <section class="portfolio section" id="portfolio" aria-labelledby="portfolio-title">
+            <h2 class="section-title" id="portfolio-title">Portfolio</h2>
+            <div class="portfolio-group-heading shell">
+                <h3 id="featured-projects-title">Featured Projects</h3>
+                <p>Applications, research, and case studies across software, data, and AI.</p>
+            </div>
+            <div class="portfolio__container bd-grid" role="group" aria-labelledby="featured-projects-title">
+                <article class="portfolio__img cover--freshroute project-card">
+                    <div class="project-cover"><img loading="lazy" src="assets/img/projects/freshroute.jpg" width="960" height="640" decoding="async" alt=""><span class="project-cover__title">FreshRoute</span></div>
                     <div class="portfolio__link">
-                        <a href="https://abrartarafder.github.io/portfolio-short/"
-                           ><span class="project-category">SELECTED WORK</span><h3>Project collection</h3><p>A closer look at my projects, experiments, and ways to connect.</p></a>
-
+                        <a href="https://github.com/abrartarafder/project-freshroute_teamab-public"><span class="project-category">FULL-STACK DEVELOPMENT</span><h3>FreshRoute</h3><p>A team-built grocery platform for organic and ethically sourced food, with product browsing, order management, and recipe-based shopping that scales ingredients to serving sizes.</p><ul class="project-tech" aria-label="Technologies"><li>React</li><li>Node.js</li><li>Express</li><li>MongoDB</li></ul><span class="project-action">View repository</span></a>
                     </div>
-                </div>
-                <div class="portfolio__img">
-                    <img loading="lazy" src="assets/img/7.png" alt="Data analytics capstone preview">
+                </article>
+                <article class="portfolio__img cover--cruise project-card">
+                    <div class="project-cover"><img loading="lazy" src="assets/img/projects/cruise-critic.jpg" width="960" height="640" decoding="async" alt=""><span class="project-cover__title">Cruise Critic Data Helper</span></div>
+                    <div class="portfolio__link">
+                        <a href="https://github.com/abrartarafder/Cruise-Critic-SQL-PowerBI-AI"><span class="project-category">DATABASES, ANALYTICS &amp; AI</span><h3>Cruise Critic Data Helper</h3><p>Relational database design and Power BI dashboards, extended with an AI question interface that turns cruise-data questions into validated SQL calculations, charts, and traceable source records.</p><ul class="project-tech" aria-label="Technologies"><li>SQL</li><li>Power BI</li><li>Python</li><li>DuckDB</li><li>Streamlit</li></ul><span class="project-action">View repository</span></a>
+                    </div>
+                </article>
+                <article class="portfolio__img cover--atlas project-card">
+                    <div class="project-cover"><img loading="lazy" src="assets/img/projects/atlas-ai.jpg" width="960" height="640" decoding="async" alt=""><span class="project-cover__title">Atlas AI Research Workspace</span></div>
+                    <div class="portfolio__link">
+                        <a href="https://github.com/abrartarafder/AtlasAI-Research-Workspace"><span class="project-category">AGENTIC AI</span><h3>Atlas AI Research Workspace</h3><p>A research agent that combines web search and calculator tools into structured briefs with linked sources, follow-up conversations, and downloadable PDF reports.</p><ul class="project-tech" aria-label="Technologies"><li>Python</li><li>LangChain</li><li>OpenAI</li><li>Streamlit</li></ul><span class="project-action">View repository</span></a>
+                    </div>
+                </article>
+                <article class="portfolio__img cover--ttc project-card">
+                    <div class="project-cover"><img loading="lazy" src="assets/img/projects/ttc-network.jpg" width="960" height="640" decoding="async" alt=""><span class="project-cover__title">TTC Network Analysis</span></div>
+                    <div class="portfolio__link">
+                        <a href="https://github.com/abrartarafder/ttc-network-analysis"><span class="project-category">GRAPH THEORY &amp; DATA SCIENCE</span><h3>TTC Network Analysis</h3><p>Models the TTC as a directed, weighted graph using GTFS data to study centrality, compare Dijkstra and A* routing, simulate disruptions, and explore network scalability.</p><ul class="project-tech" aria-label="Technologies"><li>Python</li><li>NetworkX</li><li>pandas</li><li>GTFS</li></ul><span class="project-action">View repository</span></a>
+                    </div>
+                </article>
+                <div class="portfolio__img cover--capstone">
+                    <div class="project-cover"><img loading="lazy" src="assets/img/projects/cruise-critic.jpg" width="960" height="640" decoding="async" alt=""><span class="project-cover__title">GOOGLE DATA ANALYTICS</span></div>
 
                     <div class="portfolio__link">
                         <a href="https://docs.google.com/presentation/d/1w72tFtqQIUHG5KSLIH_DBT07t3_pwRnN-tJ7Zmjpxf4/edit#slide=id.g218685df1f5_0_1955"
-                           ><span class="project-category">DATA ANALYTICS</span><h3>Capstone study</h3><p>A data analytics project developed through four months of coursework.</p></a>
+                           ><span class="project-category">DATA ANALYTICS</span><h3>Cyclistic Capstone Study</h3><p>Analyzes differences between casual riders and annual members using SQL, spreadsheets, R, and Python to inform membership marketing recommendations.</p><ul class="project-tech" aria-label="Skills and topics"><li>SQL</li><li>Excel</li><li>Google Sheets</li><li>R</li><li>Python</li></ul><span class="project-action">View case study</span></a>
 
                     </div>
                 </div>
-                <div class="portfolio__img">
-                    <img loading="lazy" src="assets/img/8.png" alt="Portfolio preview">
-
-                    <div class="portfolio__link">
-                        <a href="https://github.com/abrartarafder"><span class="project-category">CODE &amp; EXPERIMENTS</span><h3>On my GitHub</h3><p>Smaller experiments, hands-on builds, and hackathon projects.</p></a>
-
-                    </div>
-                </div>
-                <div class="portfolio__img">
-                    <img loading="lazy" src="assets/img/9.png" alt="Portfolio preview">
-
-                    <div class="portfolio__link">
-                        <a href="assets/img/Resume_Abrar_JT.pdf"><span class="project-category">BACKGROUND</span><h3>My resume</h3><p>Experience, skills, and the details behind my journey so far.</p></a>
-
-                    </div>
-                </div>
-                <div class="portfolio__img">
-                    <img loading="lazy" src="assets/img/10.png" alt="Portfolio preview">
-
-                    <div class="portfolio__link">
-                        <a href="https://www.linkedin.com/in/abrar-tarafder/"><span class="project-category">LET'S CONNECT</span><h3>Beyond the portfolio</h3><p>Follow my professional journey and latest updates on LinkedIn.</p></a>
-
-
-                    </div>
-
-                </div>
-
-                <div class="portfolio__img">
-                    <img loading="lazy" src="assets/img/11.png" alt="Portfolio preview">
+                <div class="portfolio__img cover--hackathon">
+                    <div class="project-cover"><img loading="lazy" src="assets/img/projects/atlas-ai.jpg" width="960" height="640" decoding="async" alt=""><span class="project-cover__title">HACKATHON PROJECT</span></div>
 
                     <div class="portfolio__link">
                         <a href="https://prezi.com/view/CRp7JxbDeo7uqUED8VgV/"
-                           ><span class="project-category">HACKATHON &middot; AWARD WINNER</span><h3>A team effort</h3><p>Top 8 out of 140 teams and winner of the People's Choice Award.</p>
+                           ><span class="project-category">HACKATHON &middot; AWARD WINNER</span><h3>EdifyLearning</h3><p>An AI-driven personalized learning concept presented at UNHack 2023, recognized with a Top 8 finish and the People's Choice Award.</p><ul class="project-tech" aria-label="Skills and topics"><li>AI in Education</li><li>Problem Solving</li><li>Teamwork</li><li>Presentation</li></ul><span class="project-action">View presentation</span>
                         </a>
 
                     </div>
 
                 </div>
             </div>
-        </section>
-        <section class="port section" id="next">
-            <h2 class="section-title">What's next.</h2>
-            <div class="skills__container bd-grid">
-                <div class="skills__box">
-                    <h3 class="skills__subtitle">Career Development</h3>
-                    <span class="about__profession">
-                        As a recent Computer Science graduate, I am exploring opportunities
-                        where I can apply my technical experience, contribute to meaningful
-                        projects, and continue growing as a developer.
-                    </span>
+            <div class="portfolio-group-heading portfolio-group-heading--resources shell">
+                <h3 id="resources-title">Profiles &amp; Resources</h3>
+                <p>Explore more of my work, review my background, or connect with me.</p>
+            </div>
+            <div class="portfolio__container portfolio__container--resources bd-grid" role="group" aria-labelledby="resources-title">
+                <div class="portfolio__img cover--collection">
+                    <div class="project-cover"><img loading="lazy" src="assets/img/projects/ttc-network.jpg" width="960" height="640" decoding="async" alt=""><span class="project-cover__title">PROJECT COLLECTION</span></div>
+
+                    <div class="portfolio__link">
+                        <a href="https://abrartarafder.github.io/portfolio-short/"
+                           ><span class="project-category">SELECTED WORK</span><h3>Project collection</h3><p>A closer look at my projects, experiments, and ways to connect.</p><ul class="project-tech" aria-label="Skills and topics"><li>Web Development</li><li>Data Analytics</li><li>Hackathons</li></ul><span class="project-action">Explore collection</span></a>
+
+                    </div>
                 </div>
-                <div class="skills__box">
-                    <h3 class="skills__subtitle">Learning Web Design</h3>
-                    <span class="about__profession"
-                       >I am currently working on
-                        web development projects and learning more as I am progressing.</span>
+                <div class="portfolio__img cover--github">
+                    <div class="project-cover"><img loading="lazy" src="assets/img/projects/atlas-ai.jpg" width="960" height="640" decoding="async" alt=""><span class="project-cover__title">GITHUB</span></div>
+
+                    <div class="portfolio__link">
+                        <a href="https://github.com/abrartarafder"><span class="project-category">CODE &amp; EXPERIMENTS</span><h3>On my GitHub</h3><p>Smaller experiments, hands-on builds, and hackathon projects.</p><ul class="project-tech" aria-label="Skills and topics"><li>Frontend</li><li>Backend</li><li>Data Analysis</li><li>Team Projects</li></ul><span class="project-action">Explore repositories</span></a>
+
+                    </div>
                 </div>
-                <div class="skills__box">
-                    <h3 class="skills__subtitle">Software & Database
-                        Development</h3>
-                    <span class="about__profession">
-                        I am continuing to strengthen my skills in software development,
-                        database engineering, SQL, Python, and automation by building
-                        practical solutions and exploring new technologies.
-                    </span>
+                <div class="portfolio__img cover--resume">
+                    <div class="project-cover"><img loading="lazy" src="assets/img/projects/ttc-network.jpg" width="960" height="640" decoding="async" alt=""><span class="project-cover__title">RESUME</span></div>
+
+                    <div class="portfolio__link">
+                        <a href="assets/img/Resume_Abrar_JT.pdf"><span class="project-category">BACKGROUND</span><h3>My resume</h3><p>Experience, skills, and the details behind my journey so far.</p><ul class="project-tech" aria-label="Skills and topics"><li>Experience</li><li>Education</li><li>Technical Skills</li></ul><span class="project-action">View resume</span></a>
+
+                    </div>
                 </div>
-                <div class="skills__box">
-                    <h3 class="skills__subtitle">Full-Stack Development</h3>
-                    <span class="about__profession">
-                        I am expanding my full-stack development experience by working with
-                        modern web technologies and developing applications that combine
-                        intuitive interfaces with reliable backend systems.
-                    </span>
-                </div>
-                <div class="skills__box">
-                    <h3 class="skills__subtitle">Technical Projects
-                    </h3>
-                    <span class="about__profession">
-                        I continue to work on projects that allow me to experiment with
-                        new technologies, solve real-world problems, and expand my
-                        experience across different areas of computer science.
-                    </span>
-                </div>
-                <div class="skills__box">
-                    <h3 class="skills__subtitle">Continuous Learning
-                    </h3>
-                    <span class="about__profession"
-                       >
-                        I am continuously developing my technical knowledge through
-                        independent learning, certifications, hands-on projects, and
-                        exploring emerging tools and technologies.
-                    </span>
+                <div class="portfolio__img cover--linkedin">
+                    <div class="project-cover"><img loading="lazy" src="assets/img/projects/freshroute.jpg" width="960" height="640" decoding="async" alt=""><span class="project-cover__title">LINKEDIN</span></div>
+
+                    <div class="portfolio__link">
+                        <a href="https://www.linkedin.com/in/abrar-tarafder/"><span class="project-category">LET'S CONNECT</span><h3>Beyond the portfolio</h3><p>Follow my professional journey and latest updates on LinkedIn.</p><ul class="project-tech" aria-label="Skills and topics"><li>Software Development</li><li>Data Analytics</li><li>Technology</li></ul><span class="project-action">View LinkedIn profile</span></a>
+
+
+                    </div>
+
                 </div>
             </div>
-
+        </section>
+        <section class="port section" id="next" aria-labelledby="focus-title">
+            <h2 class="section-title" id="focus-title">Current Focus</h2>
+            <p class="section-intro shell">What I'm building toward next.</p>
+            <div class="skills__container bd-grid">
+                <div class="skills__box"><h3 class="skills__subtitle">Agentic AI</h3><p class="about__profession">Exploring tool-using agents, research workflows, and ways to evaluate AI outputs. Building on Atlas to make AI-assisted work more useful and transparent.</p></div>
+                <div class="skills__box"><h3 class="skills__subtitle">Software Development</h3><p class="about__profession">Strengthening full-stack development through practical applications, from clear interfaces and APIs to reliable databases and maintainable code.</p></div>
+                <div class="skills__box"><h3 class="skills__subtitle">Data &amp; Automation</h3><p class="about__profession">Building on SQL, Python, and analytics experience to improve data quality, surface useful insights, and automate repetitive workflows.</p></div>
+                <div class="skills__box"><h3 class="skills__subtitle">Career Opportunities</h3><p class="about__profession">Seeking software development, data analytics, and technology roles where I can contribute 3+ years of experience, keep learning, and grow with a team.</p></div>
+            </div>
         </section>
             <!--===== CONTACT =====-->
 
@@ -389,7 +381,7 @@
 
     <!--===== FOOTER =====-->
     <footer class="footer section" id="contact">
-        <div class="contact-heading shell"><p class="eyebrow">HAVE SOMETHING IN MIND?</p><h2>Let's build<br><a href="mailto:abrart1075@gmail.com">something good.</a></h2></div>
+        <div class="contact-heading shell"><p class="eyebrow">HAVE SOMETHING IN MIND?</p><h2>Let's build<br><a href="mailto:abrart1075@gmail.com">something good.</a></h2><a class="contact-email" href="mailto:abrart1075@gmail.com">abrart1075@gmail.com</a></div>
         <div class="footer__container bd-grid">
             <div class="footer__data">
                 <h2 class="footer__title">ABRAR JAWAD TARAFDER</h2>
@@ -410,24 +402,24 @@
             <div class="footer__data">
                 <h2 class="footer__title">REACH OUT TO ME</h2>
                 <a aria-label="LinkedIn" href="https://www.linkedin.com/in/abrar-tarafder/" class="footer__social"
-                   ><i class='bx bxl-linkedin'></i></a>
-                <a aria-label="GitHub" href="https://github.com/abrartarafder" class="footer__social"><i
+                   ><i aria-hidden="true" class='bx bxl-linkedin'></i></a>
+                <a aria-label="GitHub" href="https://github.com/abrartarafder" class="footer__social"><i aria-hidden="true"
                         class='bx bxl-github'></i></a>
                 <a aria-label="Instagram" href="https://www.instagram.com/abrartarafder/?hl=en" class="footer__social"
-                   ><i class='bx bxl-instagram'></i></a>
-                <a aria-label="Twitter" href="https://twitter.com/abrart1075" class="footer__social"><i
+                   ><i aria-hidden="true" class='bx bxl-instagram'></i></a>
+                <a aria-label="Twitter" href="https://twitter.com/abrart1075" class="footer__social"><i aria-hidden="true"
                         class='bx bxl-twitter'></i></a>
-                <a aria-label="Email Abrar" href="mailto:abrart1075@gmail.com" class="footer__social"><i
+                <a aria-label="Email Abrar" href="mailto:abrart1075@gmail.com" class="footer__social"><i aria-hidden="true"
                         class='bx bxl-gmail'></i></a>
                 <a aria-label="Expanded CV" href="https://abrartarafder.github.io/abrar-cv-expanded/" class="footer__social"
-                   ><i class='bx bxs-folder-plus'></i></a>
+                   ><i aria-hidden="true" class='bx bxs-folder-plus'></i></a>
             </div>
 
 
         </div>
     </footer>
     <!-- Local interactions -->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>
