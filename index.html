@@ -4,84 +4,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Include the Typed.js library -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-    <!-- ===== CSS ===== -->
+    <meta name="description" content="Abrar Jawad Tarafder &mdash; Computer Science graduate in Toronto building software, databases, and thoughtful web experiences.">
+    <meta name="theme-color" content="#333b51">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
-
-    <!-- ===== BOX ICONS ===== -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
-    <!-- box icons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-    <!-- custom css -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
     <link rel="icon" href="assets/img/favicon.ico">
-    <title>Abrar Website</title>
+    <title>Abrar Tarafder &mdash; Software, Data &amp; Design</title>
 </head>
 
 <body>
-    <!--===== HEADER =====-->
-    <header class="l-header" style="background-color: var(--nav-color)">
-        <nav class="nav bd-grid">
-            <div>
-                <a href="#" class="nav__logo">AT</a>
-            </div>
-
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="l-header">
+        <nav class="nav shell" aria-label="Main navigation">
+            <a href="#home" class="nav__logo" aria-label="Abrar Tarafder home">at<span>.</span></a>
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                    <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
-                    <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
-                    <li><i style="margin-left: 30px; color: #ff8317; font-size: large;" class='bx bx-moon change-theme'
-                            id="theme-button"></i></li>
+                    <li><a href="#about" class="nav__link">About</a></li>
+                    <li><a href="#experience" class="nav__link">Experience</a></li>
+                    <li><a href="#portfolio" class="nav__link">Work</a></li>
+                    <li><a href="#skills" class="nav__link">Skills</a></li>
                 </ul>
             </div>
-
-            <div class="nav__toggle" id="nav-toggle">
-                <i class='bx bx-menu'></i>
+            <div class="nav__actions">
+                <button class="icon-button" id="theme-button" aria-label="Switch to dark theme" aria-pressed="false"><i class="bx bx-moon" aria-hidden="true"></i></button>
+                <a class="nav__contact" href="mailto:abrart1075@gmail.com">Let's talk <span aria-hidden="true">&nearr;</span></a>
+                <button class="icon-button nav__toggle" id="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-menu"><i class="bx bx-menu" aria-hidden="true"></i></button>
             </div>
         </nav>
     </header>
-
-    <main class="l-main">
-        <!--===== HOME =====-->
-        <section class="home" id="home">
-            <div class="home__container bd-grid">
-                <h1 class="home__title"><span>HEY!</span></h1>
-                <br>
-                <h2 style="color: #ff8317;"><span>I'M ABRAR JAWAD TARAFDER.</span></h2>
-                <p style="color: white">A <span id="roleDescription" class="multiple-text"
-                        style="color: #ff8317;"></span> in Toronto, Ontario, Canada.</p>
-                <br>
-                <br>
-                <div class="home__scroll">
-                    <a href="#about" class="home__scroll-link"><i class='bx bx-up-arrow-alt'></i>Scroll down</a>
+    <main class="l-main" id="main">
+        <section class="home" id="home" aria-labelledby="hero-title">
+            <div class="hero-grid shell">
+                <div class="hero-copy">
+                    <p class="eyebrow"><span class="status-dot"></span> TORONTO, CANADA &middot; CS GRADUATE</p>
+                    <h1 id="hero-title">A little curiosity.<br>A lot of <em>building.</em></h1>
+                    <p class="hero-intro">Hey, I'm <strong>Abrar Tarafder.</strong></p>
+                    <p class="hero-description">I turn complex problems into useful software, reliable databases, and thoughtful digital experiences.</p>
+                    <div class="hero-actions"><a class="button button--primary" href="#portfolio">Explore my work <span aria-hidden="true">&nearr;</span></a><a class="button button--outline" href="assets/img/Resume_Abrar_JT.pdf" download>Get my resume <span aria-hidden="true">&darr;</span></a></div>
+                    <div class="hero-social"><a href="https://github.com/abrartarafder">GitHub &nearr;</a><a href="https://www.linkedin.com/in/abrar-tarafder/">LinkedIn &nearr;</a><span>Always learning. Always building.</span></div>
+                </div>
+                <div class="hero-visual">
+                    <div class="portrait-frame"><img src="assets/img/IMG_7514%202.jpg" alt="Abrar Tarafder" fetchpriority="high"><span class="portrait-label">THE PERSON BEHIND THE PROJECTS</span></div>
+                    <div class="floating-note"><span class="note-icon" aria-hidden="true">&lt;/&gt;</span><div>Built with curiosity.<small>Software &middot; Data &middot; Design</small></div></div>
+                    <span class="visual-star" aria-hidden="true">&#10035;</span>
                 </div>
             </div>
+            <div class="hero-bottom shell"><span>FROM IDEAS TO SOMETHING REAL</span><a href="#about">A little more about me <span aria-hidden="true">&darr;</span></a></div>
         </section>
-
+        <div class="experience-strip"><div class="shell"><span>EXPERIENCE ACROSS</span><strong>York University</strong><span class="strip-cross" aria-hidden="true">&#10035;</span><strong>Hydro One</strong><span class="strip-cross" aria-hidden="true">&#10035;</span><strong>Walk With Web</strong></div></div>
         <!--===== ABOUT =====-->
         <section class="about section" id="about">
-            <h2 class="section-title" style="color: var(--first-color);">ABOUT ME</h2>
+            <h2 class="section-title">A curious mind. A practical approach.</h2>
 
             <div class="about__container bd-grid">
-                <div class="about__img" style=" width: 200px; border-radius: 50%;
-                    ">
-                    <img style="border-radius: 50%;" src="assets/img/IMG_7514 2.jpg" alt="">
+                <div class="about__img">
+                    <img loading="lazy" src="assets/img/IMG_7514 2.jpg" alt="Abrar Tarafder">
                 </div>
 
                 <div>
-                    <h2 class="about__subtitle" style="color: var(--c-color);">Hi! I'm Abrar Tarafder</h2>
-                    <span class="about__profession" style="color: #ff8317">New Graduate CS @ York University</span>
+                    <h2 class="about__subtitle">Good software starts with a good question.</h2>
+                    <span class="about__profession">Computer Science graduate &middot; York University</span>
                     <p class="about__text">Passionate about continuous learning and eager to explore, I thrive on
                         embracing change and actively seek out new challenges. With nearly 4 years of professional
                         experience gained through co-op and contract opportunities during my undergraduate studies,
@@ -91,27 +76,26 @@
                         technologies, connecting with inspiring individuals, or contributing to meaningful projects, I'm
                         always excited to learn and grow.
 
-                        Feel free to connect with me, and don't forget to visit my website to learn more about my
-                        experiences, projects, and interests!
+                        I'm now looking for opportunities to bring that experience to a team and keep building meaningful things.
                     </p>
 
                     <div class="about__social">
-                        <a href="https://www.linkedin.com/in/abrar-tarafder/" class="about__social-icon"><i
+                        <a aria-label="LinkedIn" href="https://www.linkedin.com/in/abrar-tarafder/" class="about__social-icon"><i
                                 class='bx bxl-linkedin'></i></a>
-                        <a href="https://github.com/abrartarafder" class="about__social-icon"><i
+                        <a aria-label="GitHub" href="https://github.com/abrartarafder" class="about__social-icon"><i
                                 class='bx bxl-github'></i></a>
-                        <a href="https://www.instagram.com/abrartarafder/?hl=en" class="about__social-icon"><i
+                        <a aria-label="Instagram" href="https://www.instagram.com/abrartarafder/?hl=en" class="about__social-icon"><i
                                 class='bx bxl-instagram'></i></a>
-                        <a href="https://twitter.com/abrart1075" class="about__social-icon"><i
+                        <a aria-label="Twitter" href="https://twitter.com/abrart1075" class="about__social-icon"><i
                                 class='bx bxl-twitter'></i></a>
-                        <a href="mailto:abrart1075@gmail.com" class="about__social-icon"><i
+                        <a aria-label="Email Abrar" href="mailto:abrart1075@gmail.com" class="about__social-icon"><i
                                 class='bx bxl-gmail'></i></a>
-                        <a href="https://abrartarafder.github.io/abrar-cv-expanded/" class="about__social-icon"><i
+                        <a aria-label="Expanded CV" href="https://abrartarafder.github.io/abrar-cv-expanded/" class="about__social-icon"><i
                                 class='bx bxs-folder-plus'></i></a>
 
 
                     </div>
-                    <br>
+                    
                     <a href="./assets/img/Resume_Abrar_JT.pdf" download>
                         <span class="skills__name"><strong>Download My Resume</strong></span>
                     </a>
@@ -124,7 +108,7 @@
 
         <!--===== SKILLS =====-->
         <section class="skills section" id="skills">
-            <h2 class="section-title" style="color: var(--title-color);">SKILLS</h2>
+            <h2 class="section-title">The tools behind the work.</h2>
 
             <div class="skills__container bd-grid">
                 <div class="skills__box">
@@ -145,7 +129,7 @@
                     <span class="skills__name">Figma</span>
                     <span class="skills__name">Canva</span>
                     <span class="skills__name">Tkinter (GUI for Python)</span>
-                    <span class="skills__name"> ReactJS (trying MERN Stack projects learning)</span>
+                    <span class="skills__name"> ReactJS (learning the MERN stack)</span>
 
                     <h3 class="skills__subtitle">Programming Languages, DB + Backend</h3>
                     <span class="skills__name">C++</span>
@@ -155,7 +139,7 @@
                     <span class="skills__name">MongoDB</span>
                     <span class="skills__name">SQL</span>
                     <span class="skills__name">Data Analytics</span>
-                    <span class="skills__name">JS (beginner)</span>
+                    <span class="skills__name">JavaScript (beginner)</span>
                     <span class="skills__name">Shell Scripting</span>
                     <span class="skills__name">DevOps</span>
                     <span class="skills__name">SCADA</span>
@@ -194,64 +178,64 @@
 
         <!--===== EXPERIENCE =====-->
         <section class="skills section" id="experience">
-            <h2 class="section-title" style="color: var(--title-color);">EXPERIENCE</h2>
+            <h2 class="section-title">Where I've put it into practice.</h2>
 
             <div class="skills__container bd-grid">
                 <div class="skills__box">
-                    <h3 class="skills__subtitle" style="margin-bottom: 5px;">Database Developer and Administrator</h3>
-                    <span class="about__profession" style="color: var(--e-color); margin-bottom: 5px;">York University
+                    <h3 class="skills__subtitle">Database Developer and Administrator</h3>
+                    <span class="about__profession">York University
                     </span>
-                    <span class="about__profession" style=" color: #ff8317; font-size: smaller; margin-top: 5px;">May
+                    <span class="about__profession">May
                         2026 - Aug 2026</span>
                 </div>
                 <div class="skills__box">
-                    <h3 class="skills__subtitle" style="margin-bottom: 5px;">OT Operations Intern (16 month Co-op)</h3>
-                    <span class="about__profession" style="color: var(--e-color); margin-bottom: 5px;">Hydro One
+                    <h3 class="skills__subtitle">OT Operations Intern (16 month Co-op)</h3>
+                    <span class="about__profession">Hydro One
                     </span>
-                    <span class="about__profession" style=" color: #ff8317; font-size: smaller; margin-top: 5px;">May
+                    <span class="about__profession">May
                         2024 - Aug 2025</span>
                 </div>
                 <div class="skills__box">
-                    <h3 class="skills__subtitle" style="margin-bottom: 5px;">Web Developer / Digital Outreach Research
+                    <h3 class="skills__subtitle">Web Developer / Digital Outreach Research
                         Assistant</h3>
-                    <span class="about__profession" style="color: var(--e-color); margin-bottom: 5px;">Walk With Web
+                    <span class="about__profession">Walk With Web
                         Inc</span>
-                    <span class="about__profession" style=" color: #ff8317; font-size: smaller; margin-top: 5px;">May
+                    <span class="about__profession">May
                         2023 - May 2024</span>
                 </div>
                 <div class="skills__box">
-                    <h3 class="skills__subtitle" style="margin-bottom: 5px;">Freelance Analyst</h3>
-                    <span class="about__profession" style="color: var(--e-color); margin-bottom: 5px;">InTech</span>
-                    <span class="about__profession" style=" color: #ff8317; font-size: smaller; margin-top: 5px;">March
+                    <h3 class="skills__subtitle">Freelance Analyst</h3>
+                    <span class="about__profession">InTech</span>
+                    <span class="about__profession">March
                         2023 - May 2023</span>
                 </div>
                 <div class="skills__box">
-                    <h3 class="skills__subtitle" style="margin-bottom: 5px;">Software Development / Digital Marketing
+                    <h3 class="skills__subtitle">Software Development / Digital Marketing
                         Intern</h3>
-                    <span class="about__profession" style="color: var(--e-color); margin-bottom: 5px;">Opal LLC</span>
-                    <span class="about__profession" style=" color: #ff8317; font-size: smaller; margin-top: 5px;">June
+                    <span class="about__profession">Opal LLC</span>
+                    <span class="about__profession">June
                         2022 - January 2023</span>
                 </div>
                 <div class="skills__box">
-                    <h3 class="skills__subtitle" style="margin-bottom: 5px;">Digital Marketer + Advertisement Designer
+                    <h3 class="skills__subtitle">Digital Marketer + Advertisement Designer
                     </h3>
                     <span class="about__profession"
-                        style="color: var(--e-color); margin-bottom: 5px;">EasyTraffic</span>
-                    <span class="about__profession" style="color: #ff8317; font-size: smaller; margin-top: 5px;"> May
+                       >EasyTraffic</span>
+                    <span class="about__profession"> May
                         2022 - September 2022</span>
                 </div>
                 <div class="skills__box">
-                    <h3 class="skills__subtitle" style="margin-bottom: 5px;">Tutor</h3>
+                    <h3 class="skills__subtitle">Tutor</h3>
                     <span class="about__profession"
-                        style="color: var(--e-color); margin-bottom: 5px;">Self-Employed</span>
-                    <span class="about__profession" style=" color: #ff8317; font-size: smaller; margin-top: 5px;">May
+                       >Self-Employed</span>
+                    <span class="about__profession">May
                         2022 - July 2022</span>
                 </div>
                 <div class="skills__box">
-                    <h3 class="skills__subtitle" style="margin-bottom: 5px;">Sales Associate</h3>
-                    <span class="about__profession" style="color: var(--e-color); margin-bottom: 5px;">Global
+                    <h3 class="skills__subtitle">Sales Associate</h3>
+                    <span class="about__profession">Global
                         Commodities Traders Inc.</span>
-                    <span class="about__profession" style=" color: #ff8317; font-size: smaller; margin-top: 5px;">Jun
+                    <span class="about__profession">Jun
                         2020 - Aug 2020</span>
                 </div>
 
@@ -259,21 +243,21 @@
         </section>
 
         <!--===== VE =====-->
-        <section class="skills section" id="">
-            <h2 class="section-title" style="color: var(--title-color);">VOLUNTEER EXPERIENCE</h2>
+        <section class="skills section volunteer" id="community">
+            <h2 class="section-title">Beyond the day job.</h2>
 
             <div class="skills__container bd-grid">
                 <div class="skills__box">
-                    <h3 class="skills__subtitle" style="margin-bottom: 5px;">Student Ambassador</h3>
-                    <span class="about__profession" style="color: var(--e-color); margin-bottom: 5px;">Jarvis Consulting
+                    <h3 class="skills__subtitle">Student Ambassador</h3>
+                    <span class="about__profession">Jarvis Consulting
                         Group</span>
-                    <span class="about__profession" style=" color: #ff8317; font-size: smaller; margin-top: 5px;">April
+                    <span class="about__profession">April
                         2023 - April 2024</span>
                 </div>
                 <div class="skills__box">
-                    <h3 class="skills__subtitle" style="margin-bottom: 5px;">LEARN Student Ambassador</h3>
-                    <span class="about__profession" style="color: var(--e-color); margin-bottom: 5px;">Microsoft</span>
-                    <span class="about__profession" style=" color: #ff8317; font-size: smaller; margin-top: 5px;">July
+                    <h3 class="skills__subtitle">LEARN Student Ambassador</h3>
+                    <span class="about__profession">Microsoft</span>
+                    <span class="about__profession">July
                         2023 - December 2023</span>
                 </div>
             </div>
@@ -282,56 +266,49 @@
 
         <!--===== PORTFOLIO =====-->
         <section class="portfolio section" id="portfolio">
-            <h2 class="section-title" style="color: var(--title-color);">PORTFOLIO</h2>
+            <h2 class="section-title">A few things I've worked on.</h2>
 
 
             <div class="portfolio__container bd-grid">
                 <div class="portfolio__img">
-                    <img src="assets/img/portfolio.png" style="opacity: 100% w-100;" alt="">
+                    <img loading="lazy" src="assets/img/portfolio.png" alt="Portfolio preview">
 
                     <div class="portfolio__link">
                         <a href="https://abrartarafder.github.io/portfolio-short/"
-                            style="padding: 20px; color:#ff8317;">My Portfolio is
-                            a seperate website altogether, it
-                            consists of a summary of all the projects and easy access to every means of contact!</a>
+                           ><span class="project-category">SELECTED WORK</span><h3>Project collection &nearr;</h3><p>A closer look at my projects, experiments, and ways to connect.</p></a>
 
                     </div>
                 </div>
                 <div class="portfolio__img">
-                    <img src="assets/img/7.png" style="opacity: 100% w-100;">
+                    <img loading="lazy" src="assets/img/7.png" alt="Data analytics capstone preview">
 
                     <div class="portfolio__link">
                         <a href="https://docs.google.com/presentation/d/1w72tFtqQIUHG5KSLIH_DBT07t3_pwRnN-tJ7Zmjpxf4/edit#slide=id.g218685df1f5_0_1955"
-                            style="padding: 20px; color:#ff8317;">A Data analytics Capstone study -- my largest project
-                            yet as the course on which this project was based on took ~ 4 months to complete!</a>
+                           ><span class="project-category">DATA ANALYTICS</span><h3>Capstone study &nearr;</h3><p>A data analytics project developed through four months of coursework.</p></a>
 
                     </div>
                 </div>
                 <div class="portfolio__img">
-                    <img src="assets/img/8.png" style="opacity: 100% w-100;" alt="">
+                    <img loading="lazy" src="assets/img/8.png" alt="Portfolio preview">
 
                     <div class="portfolio__link">
-                        <a href="https://github.com/abrartarafder" style="padding: 20px; color:#ff8317;">My Github
-                            consists of some smaller projects as well as larger hackathon projects!</a>
+                        <a href="https://github.com/abrartarafder"><span class="project-category">CODE &amp; EXPERIMENTS</span><h3>On my GitHub &nearr;</h3><p>Smaller experiments, hands-on builds, and hackathon projects.</p></a>
 
                     </div>
                 </div>
                 <div class="portfolio__img">
-                    <img src="assets/img/9.png" style="opacity: 100% w-100;" alt="">
+                    <img loading="lazy" src="assets/img/9.png" alt="Portfolio preview">
 
                     <div class="portfolio__link">
-                        <a href="assets/img/Resume_Abrar_JT.pdf" style="padding: 20px; color:#ff8317;">Find my
-                            resume here to look at my skills and experience!</a>
+                        <a href="assets/img/Resume_Abrar_JT.pdf"><span class="project-category">BACKGROUND</span><h3>My resume &nearr;</h3><p>Experience, skills, and the details behind my journey so far.</p></a>
 
                     </div>
                 </div>
                 <div class="portfolio__img">
-                    <img src="assets/img/10.png" style="opacity: 100% w-100;" alt="">
+                    <img loading="lazy" src="assets/img/10.png" alt="Portfolio preview">
 
                     <div class="portfolio__link">
-                        <a href="https://www.linkedin.com/in/abrar-tarafder/" style="padding: 20px; color:#ff8317;">I am
-                            currently working on a number of passion projects and trying to gain experience with
-                            internships and hackathons. Click to visit my LinkedIn and check them out!</a>
+                        <a href="https://www.linkedin.com/in/abrar-tarafder/"><span class="project-category">LET'S CONNECT</span><h3>Beyond the portfolio &nearr;</h3><p>Follow my professional journey and latest updates on LinkedIn.</p></a>
 
 
                     </div>
@@ -339,76 +316,66 @@
                 </div>
 
                 <div class="portfolio__img">
-                    <img src="assets/img/11.png" style="opacity: 100% w-100;" alt="">
+                    <img loading="lazy" src="assets/img/11.png" alt="Portfolio preview">
 
                     <div class="portfolio__link">
                         <a href="https://prezi.com/view/CRp7JxbDeo7uqUED8VgV/"
-                            style="padding: 20px; color:#ff8317;">Group Hackathon Project:
-                            <br>
-                            This project won: Top 8 Project out of 140 teams and People's Choice Award, Check it out!
+                           ><span class="project-category">HACKATHON &middot; AWARD WINNER</span><h3>A team effort &nearr;</h3><p>Top 8 out of 140 teams and winner of the People's Choice Award.</p>
                         </a>
 
                     </div>
 
                 </div>
-                <br>
-                <br>
-                <div class="home__scroll">
-                    <a href="#next" style="color: var(--oar)" class="home__scroll-link"><i
-                            class='bx bx-up-arrow-alt'></i>Scroll down</a>
-                </div>
-
-
-
+            </div>
         </section>
         <section class="port section" id="next">
-            <h2 class="section-title" style="color: var(--title-color);">CURRENT FOCUS</h2>
+            <h2 class="section-title">What's next.</h2>
             <div class="skills__container bd-grid">
                 <div class="skills__box">
-                    <h3 class="skills__subtitle" style="margin-bottom: 5px;  color: #ff8317">Career Development</h3>
-                    <span class="about__profession" style="color: var(--e-color); font-size: smaller; margin-top: 5px;">
+                    <h3 class="skills__subtitle">Career Development</h3>
+                    <span class="about__profession">
                         As a recent Computer Science graduate, I am exploring opportunities
                         where I can apply my technical experience, contribute to meaningful
                         projects, and continue growing as a developer.
                     </span>
                 </div>
                 <div class="skills__box">
-                    <h3 class="skills__subtitle" style="margin-bottom: 5px;  color: #ff8317">Learning Web Design</h3>
+                    <h3 class="skills__subtitle">Learning Web Design</h3>
                     <span class="about__profession"
-                        style="color: var(--e-color); font-size: smaller; margin-top: 5px;">I am currently working on
+                       >I am currently working on
                         web development projects and learning more as I am progressing.</span>
                 </div>
                 <div class="skills__box">
-                    <h3 class="skills__subtitle" style="margin-bottom: 5px;  color: #ff8317">Software & Database
+                    <h3 class="skills__subtitle">Software & Database
                         Development</h3>
-                    <span class="about__profession" style="color: var(--e-color); font-size: smaller; margin-top: 5px;">
+                    <span class="about__profession">
                         I am continuing to strengthen my skills in software development,
                         database engineering, SQL, Python, and automation by building
                         practical solutions and exploring new technologies.
                     </span>
                 </div>
                 <div class="skills__box">
-                    <h3 class="skills__subtitle" style="margin-bottom: 5px;  color: #ff8317">Full-Stack Development</h3>
-                    <span class="about__profession" style="color: var(--e-color); font-size: smaller; margin-top: 5px;">
+                    <h3 class="skills__subtitle">Full-Stack Development</h3>
+                    <span class="about__profession">
                         I am expanding my full-stack development experience by working with
                         modern web technologies and developing applications that combine
                         intuitive interfaces with reliable backend systems.
                     </span>
                 </div>
                 <div class="skills__box">
-                    <h3 class="skills__subtitle" style="margin-bottom: 5px;  color: #ff8317">Technical Projects
+                    <h3 class="skills__subtitle">Technical Projects
                     </h3>
-                    <span class="about__profession" style="color: var(--e-color); font-size: smaller; margin-top: 5px;">
+                    <span class="about__profession">
                         I continue to work on projects that allow me to experiment with
                         new technologies, solve real-world problems, and expand my
                         experience across different areas of computer science.
                     </span>
                 </div>
                 <div class="skills__box">
-                    <h3 class="skills__subtitle" style="margin-bottom: 5px;  color: #ff8317">Continuous Learning
+                    <h3 class="skills__subtitle">Continuous Learning
                     </h3>
                     <span class="about__profession"
-                        style="color: var(--e-color); font-size: smaller; margin-top: 5px; margin-bottom: 70px;">
+                       >
                         I am continuously developing my technical knowledge through
                         independent learning, certifications, hands-on projects, and
                         exploring emerging tools and technologies.
@@ -416,53 +383,51 @@
                 </div>
             </div>
 
+        </section>
             <!--===== CONTACT =====-->
 
     </main>
 
     <!--===== FOOTER =====-->
-    <footer class="footer section">
+    <footer class="footer section" id="contact">
+        <div class="contact-heading shell"><p class="eyebrow">HAVE SOMETHING IN MIND?</p><h2>Let's build<br><a href="mailto:abrart1075@gmail.com">something good. &nearr;</a></h2></div>
         <div class="footer__container bd-grid">
             <div class="footer__data">
                 <h2 class="footer__title">ABRAR JAWAD TARAFDER</h2>
-                <p class="footer__text" style="color: var(--greyer);">I'm AT and this is my personal website</p>
+                <p class="footer__text">Software, data, and design. Built with curiosity in Toronto.</p>
             </div>
 
             <div class="footer__data">
                 <h2 class="footer__title">EXPLORE</h2>
                 <ul>
-                    <li><a href="#home" style="color: var(--greyer);" class="footer__link">Home</a></li>
-                    <li><a href="#about" style="color: var(--greyer);" class="footer__link">About</a></li>
-                    <li><a href="#skills" style="color: var(--greyer);" class="footer__link">Skills</a></li>
-                    <li><a href="#experience" style="color: var(--greyer);" class="footer__link">Experience</a></li>
-                    <li><a href="#portfolio" style="color: var(--greyer);" class="footer__link">Portfolio</a></li>
+                    <li><a href="#home" class="footer__link">Home</a></li>
+                    <li><a href="#about" class="footer__link">About</a></li>
+                    <li><a href="#skills" class="footer__link">Skills</a></li>
+                    <li><a href="#experience" class="footer__link">Experience</a></li>
+                    <li><a href="#portfolio" class="footer__link">Portfolio</a></li>
                 </ul>
             </div>
 
             <div class="footer__data">
                 <h2 class="footer__title">REACH OUT TO ME</h2>
-                <a href="https://www.linkedin.com/in/abrar-tarafder/" class="footer__social"
-                    style="color: var(--greyer);"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/abrartarafder" class="footer__social" style="color: var(--greyer);"><i
+                <a aria-label="LinkedIn" href="https://www.linkedin.com/in/abrar-tarafder/" class="footer__social"
+                   ><i class='bx bxl-linkedin'></i></a>
+                <a aria-label="GitHub" href="https://github.com/abrartarafder" class="footer__social"><i
                         class='bx bxl-github'></i></a>
-                <a href="https://www.instagram.com/abrartarafder/?hl=en" class="footer__social"
-                    style="color: var(--greyer);"><i class='bx bxl-instagram'></i></a>
-                <a href="https://twitter.com/abrart1075" class="footer__social" style="color: var(--greyer);"><i
+                <a aria-label="Instagram" href="https://www.instagram.com/abrartarafder/?hl=en" class="footer__social"
+                   ><i class='bx bxl-instagram'></i></a>
+                <a aria-label="Twitter" href="https://twitter.com/abrart1075" class="footer__social"><i
                         class='bx bxl-twitter'></i></a>
-                <a href="mailto:abrart1075@gmail.com" class="footer__social" style="color: var(--greyer);"><i
+                <a aria-label="Email Abrar" href="mailto:abrart1075@gmail.com" class="footer__social"><i
                         class='bx bxl-gmail'></i></a>
-                <a href="https://abrartarafder.github.io/abrar-cv-expanded/" class="footer__social"
-                    style="color: var(--greyer);"><i class='bx bxs-folder-plus'></i></a>
+                <a aria-label="Expanded CV" href="https://abrartarafder.github.io/abrar-cv-expanded/" class="footer__social"
+                   ><i class='bx bxs-folder-plus'></i></a>
             </div>
 
 
         </div>
     </footer>
-
-    <!--===== SCROLL REVEAL =====-->
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <!--===== MAIN JS =====-->
+    <!-- Local interactions -->
     <script src="assets/js/main.js"></script>
 </body>
 

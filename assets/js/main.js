@@ -1,110 +1,52 @@
-/*===== MENU SHOW =====*/
-const showMenu = (toggleId, navId) => {
-  const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId);
-
-  if (toggle && nav) {
-    toggle.addEventListener("click", () => {
-      nav.classList.toggle("show");
-    });
-  }
-};
-showMenu("nav-toggle", "nav-menu");
-
-/*===== REMOVE MENU MOBILE =====*/
-const navLink = document.querySelectorAll(".nav__link");
-
-function linkAction() {
-  const navMenu = document.getElementById("nav-menu");
-  navMenu.classList.remove("show");
+﻿const menu = document.getElementById('nav-menu');
+const toggle = document.getElementById('nav-toggle');
+const links = [...document.querySelectorAll('.nav__link')];
+function closeMenu() {
+  menu.classList.remove('show');
+  toggle.setAttribute('aria-expanded', 'false');
+  toggle.setAttribute('aria-label', 'Open navigation');
 }
-navLink.forEach((n) => n.addEventListener("click", linkAction));
-
-/*===== SCROLL SECTIONS ACTIVE LINK =====*/
-const sections = document.querySelectorAll("section[id]");
-
-window.addEventListener("scroll", scrollActive);
-
-function scrollActive() {
-  const scrollY = window.pageYOffset;
-
-  sections.forEach((current) => {
-    const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 50;
-    sectionId = current.getAttribute("id");
-
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      document
-        .querySelector(".nav__menu a[href*=" + sectionId + "]")
-        .classList.add("active");
-    } else {
-      document
-        .querySelector(".nav__menu a[href*=" + sectionId + "]")
-        .classList.remove("active");
-    }
-  });
-}
-
-/*===== SCROLL REVEAL ANIMATION =====*/
-const sr = ScrollReveal({
-  origin: "top",
-  distance: "80px",
-  duration: 2000,
-  reset: true,
+toggle.addEventListener('click', () => {
+  const open = menu.classList.toggle('show');
+  toggle.setAttribute('aria-expanded', String(open));
+  toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
 });
-
-// Get the theme button and add a click event listener
-const themeButton = document.getElementById("theme-button");
-themeButton.addEventListener("click", toggleDarkMode);
-
-// Function to toggle dark mode
-function toggleDarkMode() {
-  // Toggle the dark mode class on the body element
-  document.body.classList.toggle("dark-mode");
-
-  // Toggle the moon and sun icons
-  if (document.body.classList.contains("dark-mode")) {
-    themeButton.classList.remove("bx-moon");
-    themeButton.classList.add("bx-sun");
-  } else {
-    themeButton.classList.remove("bx-sun");
-    themeButton.classList.add("bx-moon");
+links.forEach(link => link.addEventListener('click', closeMenu));
+document.addEventListener('click', event => {
+  if (!event.target.closest('.nav')) closeMenu();
+});
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && menu.classList.contains('show')) {
+    closeMenu();
+    toggle.focus();
   }
+});
+window.matchMedia('(min-width: 761px)').addEventListener('change', closeMenu);
+const themeButton = document.getElementById('theme-button');
+function applyTheme(dark) {
+  document.body.classList.toggle('dark-mode', dark);
+  themeButton.setAttribute('aria-pressed', String(dark));
+  themeButton.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+  themeButton.firstElementChild.className = dark ? 'bx bx-sun' : 'bx bx-moon';
 }
-    // Array of different roles
-    const roles = ['Computer Scientist', 'Data Analyst', 'Database Developer', 'Graphic and Web Designer', 'Digital Marketer', 'Tech Enthusiast']; // Add more roles as needed
-    // Initialize Typed.js instance
-    const type = new Typed('#roleDescription', {
-        strings: roles,
-        typeSpeed: 100,
-        backSpeed: 100,
-        backDelay: 1000,
-        loop: true
-    });
-
-
-/*SCROLL HOME*/
-sr.reveal(".home__title", {});
-sr.reveal(".home__scroll", { delay: 200 });
-sr.reveal(".home__img", { origin: "right", delay: 400 });
-
-/*SCROLL ABOUT*/
-sr.reveal(".about__img", { delay: 500 });
-sr.reveal(".about__subtitle", { delay: 300 });
-sr.reveal(".about__profession", { delay: 400 });
-sr.reveal(".about__text", { delay: 500 });
-sr.reveal(".about__social-icon", { delay: 600, interval: 200 });
-
-/*SCROLL SKILLS*/
-sr.reveal(".skills__subtitle", {});
-sr.reveal(".skills__name", { distance: "20px", delay: 50, interval: 100 });
-sr.reveal(".skills__img", { delay: 400 });
-
-/*SCROLL PORTFOLIO*/
-sr.reveal(".portfolio__img", { interval: 200 });
-
-/*SCROLL CONTACT*/
-sr.reveal(".contact__subtitle", {});
-sr.reveal(".contact__text", { interval: 200 });
-sr.reveal(".contact__input", { delay: 400 });
-sr.reveal(".contact__button", { delay: 600 });
+try { applyTheme(localStorage.getItem('portfolio-theme') === 'dark'); } catch { /* Storage can be unavailable. */ }
+themeButton.addEventListener('click', () => {
+  const dark = !document.body.classList.contains('dark-mode');
+  applyTheme(dark);
+  try { localStorage.setItem('portfolio-theme', dark ? 'dark' : 'light'); } catch { /* Theme still works for this visit. */ }
+});
+let scheduled = false;
+function updateNavigation() {
+  const current = [...document.querySelectorAll('main section[id]')].reverse().find(section => section.getBoundingClientRect().top <= 160);
+  links.forEach(link => {
+    const active = link.hash === `#${current?.id}`;
+    link.classList.toggle('active', active);
+    if (active) link.setAttribute('aria-current', 'location');
+    else link.removeAttribute('aria-current');
+  });
+  scheduled = false;
+}
+window.addEventListener('scroll', () => {
+  if (!scheduled) { scheduled = true; requestAnimationFrame(updateNavigation); }
+}, { passive: true });
+updateNavigation();
