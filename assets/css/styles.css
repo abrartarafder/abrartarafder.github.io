@@ -564,6 +564,126 @@ a:focus-visible,button:focus-visible {
 .port .about__profession {
     font-size:13px
 }
+.github-calendar {
+    margin-top: clamp(2.5rem, 5vw, 4rem);
+}
+.github-calendar__title {
+    margin-bottom: 1rem;
+    font-size: clamp(1.5rem, 2.5vw, 1.875rem);
+    line-height: 1.25;
+    letter-spacing: -.025em;
+}
+.github-calendar__card {
+    --contribution-empty: var(--soft);
+    --contribution-low: #ffdbac;
+    --contribution-medium: #ffbd75;
+    --contribution-high: #ffa13e;
+    --contribution-peak: #ff8316;
+    padding: clamp(1rem, 3vw, 2rem);
+    border: 1px solid var(--line);
+    border-radius: 1.25rem;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+}
+.dark-mode .github-calendar__card {
+    --contribution-empty: #343d51;
+    --contribution-low: #985629;
+    --contribution-medium: #c26627;
+    --contribution-high: #e97622;
+}
+.github-calendar__header,
+.github-calendar__footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem 1rem;
+}
+.github-calendar__status,
+.github-calendar__footer {
+    color: var(--muted);
+    font-size: .875rem;
+    font-variant-numeric: tabular-nums;
+}
+.github-calendar__profile {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    gap: .4rem;
+    font-size: .875rem;
+    font-weight: 700;
+}
+.github-calendar__profile .bx {
+    font-size: 1.25rem;
+}
+.github-calendar__scroll {
+    margin-block: 1.15rem .65rem;
+    padding-bottom: .4rem;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+}
+.github-calendar__grid {
+    --day-size: .75rem;
+    --day-gap: .25rem;
+    display: grid;
+    grid-template-columns: repeat(var(--weeks), minmax(var(--day-size), 1fr));
+    grid-template-rows: 1.375rem repeat(7, auto);
+    gap: var(--day-gap);
+    width: max(100%, calc(var(--weeks) * (var(--day-size) + var(--day-gap)) - var(--day-gap)));
+    color: var(--muted);
+    font-size: .75rem;
+    line-height: 1;
+}
+.github-calendar__label {
+    align-self: center;
+    white-space: nowrap;
+}
+.github-calendar__day,
+.github-calendar__swatch {
+    border-radius: .2rem;
+    background: var(--contribution-color);
+}
+.github-calendar__day {
+    min-width: 0;
+    aspect-ratio: 1;
+    padding: 0;
+    border: 1px solid color-mix(in srgb, var(--contribution-color), var(--ink) 8%);
+}
+.github-calendar__day:hover,
+.github-calendar__day:focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: -2px;
+}
+.github-calendar [data-level="0"] { --contribution-color: var(--contribution-empty); }
+.github-calendar [data-level="1"] { --contribution-color: var(--contribution-low); }
+.github-calendar [data-level="2"] { --contribution-color: var(--contribution-medium); }
+.github-calendar [data-level="3"] { --contribution-color: var(--contribution-high); }
+.github-calendar [data-level="4"] { --contribution-color: var(--contribution-peak); }
+.github-calendar__legend {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    min-height: 1.5rem;
+    margin-left: auto;
+}
+.github-calendar__legend span:first-child {
+    margin-right: .2rem;
+}
+.github-calendar__legend span:last-child {
+    margin-left: .2rem;
+}
+.github-calendar__swatch {
+    width: .75rem;
+    height: .75rem;
+}
+.github-calendar__hint {
+    display: none;
+}
+@media (max-width: 960px) {
+    .github-calendar__footer:has(.github-calendar__detail[hidden]) .github-calendar__hint {
+        display: block;
+    }
+}
 .footer {
     background:var(--slate);
     color:#fff;
